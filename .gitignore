@@ -69,3 +69,9 @@ crashlytics-build.properties
 Thumbs.db
 Desktop.ini
 logRunSetup.txt
+
+*.bnk
+
+GJS2024_WwiseProject/GeneratedSoundBanks/
+
+Assets/StreamingAssets/Audio/GeneratedSoundBanks/
