@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using UnityEngine;
 
 namespace kc.runtime
 {
@@ -8,16 +6,13 @@ namespace kc.runtime
     /// S'occupe du mouvement d'un ennemi de base
     /// </summary>
     [RequireComponent(typeof(Rigidbody2D))]
-    public class EnemyMovementController : MonoBehaviour
+    public class BasicEnemyMovementController : MonoBehaviour
     {
         [SerializeField]
         private Transform _player;
 
         [SerializeField]
         private float _acceleration;
-
-        [SerializeField]
-        private float _jumpForce;
 
         [SerializeField]
         private float _speed;
@@ -41,14 +36,6 @@ namespace kc.runtime
                 direction = 1;
             }
             _rigidbody.velocity = new Vector2(direction * _speed, _rigidbody.velocity.y);
-        }
-
-        private void Jump()
-        {
-            if (_isGrounded)
-            {
-                _rigidbody.AddForce(new Vector2(0f, _jumpForce), ForceMode2D.Impulse);
-            }
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
