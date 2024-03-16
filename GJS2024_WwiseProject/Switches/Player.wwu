@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6DC70F1A-7A20-4E52-9C98-2C6480A2A07C}" SchemaVersion="119" RootDocumentID="{4A610F5D-99BA-4B46-B15C-54108539506F}" ParentDocumentID="{4A610F5D-99BA-4B46-B15C-54108539506F}">
+	<Switches>
+		<WorkUnit Name="Player" ID="{6DC70F1A-7A20-4E52-9C98-2C6480A2A07C}" OwnerID="{4A610F5D-99BA-4B46-B15C-54108539506F}" PersistMode="Nested">
+			<ChildrenList>
+				<SwitchGroup Name="SW_Player_Footsteps_Ground_Materials" ID="{C1F4F481-6170-4AC3-ADFA-72C04D41D856}">
+					<ChildrenList>
+						<Switch Name="Dirt" ID="{468C341F-EC51-4325-9C63-5082D42E54E6}"/>
+						<Switch Name="Grass" ID="{28943A4D-623A-4D42-AF41-8EF18D7203D5}"/>
+						<Switch Name="Gravel" ID="{820AB4BB-5A22-43DC-B0A3-2D685B18AF0E}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

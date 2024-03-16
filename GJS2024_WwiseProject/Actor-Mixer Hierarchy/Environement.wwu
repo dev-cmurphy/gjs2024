@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{B882ABF4-3DB4-4F67-8D0A-7657FE1B2001}" SchemaVersion="119">
 	<AudioObjects>
-		<WorkUnit Name="Environement" ID="{B882ABF4-3DB4-4F67-8D0A-7657FE1B2001}" PersistMode="Standalone"/>
+		<WorkUnit Name="Environement" ID="{B882ABF4-3DB4-4F67-8D0A-7657FE1B2001}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="12"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<ActorMixer Name="MixerEnvironement" ID="{C06B0CFA-C8EA-45F3-8F49-2EA09719E06A}" ShortID="569486675">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

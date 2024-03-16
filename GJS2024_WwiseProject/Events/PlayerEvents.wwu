@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{90193F73-76D2-4234-8628-F83C132E1C98}" SchemaVersion="119" RootDocumentID="{0DB3F366-573D-4E5D-A4BC-A7DB8C3661C5}" ParentDocumentID="{0DB3F366-573D-4E5D-A4BC-A7DB8C3661C5}">
+	<Events>
+		<WorkUnit Name="PlayerEvents" ID="{90193F73-76D2-4234-8628-F83C132E1C98}" OwnerID="{0DB3F366-573D-4E5D-A4BC-A7DB8C3661C5}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Play_Player_Footsteps_Walk" ID="{F86B36CB-1F7C-42CF-B252-19E6289CB629}">
+					<ChildrenList>
+						<Action Name="" ID="{2EE5787F-D1EC-4E0F-88F9-D84A131E8B96}" ShortID="54925850">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SW_Player_Footsteps_Materials" ID="{376FE01B-9F0D-47E2-A976-92EAD103AA71}" WorkUnitID="{4DC3D2E2-C950-4D45-A4B9-C9E5FE4EBE16}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Player_Jump" ID="{548C2F19-5B74-439F-8C7E-C93BB28338B9}">
+					<ChildrenList>
+						<Action Name="" ID="{A5BA616B-F3B6-4CE6-ACE9-F8EEBEFE94EB}" ShortID="249937338">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SQ_Player_Jump" ID="{EF406E93-2C88-428D-8516-A39B58CE8692}" WorkUnitID="{4DC3D2E2-C950-4D45-A4B9-C9E5FE4EBE16}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Player_Footsteps_Walk" ID="{2FC2EEE8-D820-4C54-98C1-E610611A4EFE}">
+					<ChildrenList>
+						<Action Name="" ID="{56A9E992-084C-4C1C-AFE1-06054465896D}" ShortID="1019188393">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SW_Player_Footsteps_Materials" ID="{376FE01B-9F0D-47E2-A976-92EAD103AA71}" WorkUnitID="{4DC3D2E2-C950-4D45-A4B9-C9E5FE4EBE16}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
