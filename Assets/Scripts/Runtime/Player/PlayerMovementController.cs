@@ -47,16 +47,26 @@ namespace kc.runtime
         private float _coyoteTimer;
         private float _lastJumpTimer;
 
+        private Vector2 _startPos;
+
         private void Awake()
         {
+            _startPos = transform.position;
             _rigidbody = GetComponent<Rigidbody2D>();
 
             _input = GetComponent<PlayerInput>();
             _moveAction = _input.actions["Move"];
             _jumpAction = _input.actions["Jump"];
+            _input.actions["Reset"].performed += ResetPlayer;
 
             _coyoteTimer = 0;
             _lastJumpTimer = 0;
+        }
+
+        private void ResetPlayer(InputAction.CallbackContext obj)
+        {
+            _rigidbody.position = _startPos;
+            _rigidbody.velocity = Vector2.zero;
         }
 
         private void OnEnable()
