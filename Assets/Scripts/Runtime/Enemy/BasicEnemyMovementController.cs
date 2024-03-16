@@ -18,28 +18,15 @@ namespace kc.runtime
         private float _speed;
 
         [SerializeField]
-        private int _maxHealth;
-        private int _health;
-
-        [SerializeField]
-        private int _damagePerBullet;
-
-        [SerializeField]
-        private int _damagePerStomp;
+        private int _direction;
 
         private Rigidbody2D _rigidbody;
 
         private Collider2D _currentCollider;
 
-        private int _direction;
-
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
-
-            _health = _maxHealth;
-
-            _direction = -1;
         }
 
         private void Update()
@@ -59,39 +46,16 @@ namespace kc.runtime
                         _currentCollider = collision.collider;
                         break;
                     }
-                }
-            }
-            if (collision.collider.CompareTag("Ground"))
-            {
-                foreach (ContactPoint2D point in collision.contacts)
-                {
                     // Check if the contact is approximately beside us
-                    if (point.normal.x > 0.75f && collision.collider.CompareTag("Ground"))
+                    else if (point.normal.x > 0.75f && collision.collider.CompareTag("Ground"))
                     {
-                        Debug.Log($"Collision to left");
                         _direction = 1;
                     }
                     else if (point.normal.x < -0.75f && collision.collider.CompareTag("Ground"))
                     {
-                        Debug.Log($"Collision to right");
                         _direction = -1;
                     }
                 }
-            }
-            if (collision.collider.CompareTag("Player"))
-            {
-                foreach (ContactPoint2D point in collision.contacts)
-                {
-                    // Check if the contact is approximately above us
-                    if (point.normal.y > 0.75f && collision.collider.CompareTag("Player"))
-                    {
-                        loseHealth(_damagePerStomp);
-                    }
-                }
-            }
-            if (collision.collider.CompareTag("Bullet")) // Change for wtv the projectile tag is
-            {
-                loseHealth(_damagePerBullet);
             }
         }
 
@@ -100,21 +64,6 @@ namespace kc.runtime
             if (collision.collider == _currentCollider)
             {
                 _currentCollider = null;
-            }
-        }
-
-        private bool isFalling()
-        {
-            return _currentCollider == null;
-        }
-
-        private void loseHealth(int damage)
-        {
-            _health -= damage;
-
-            if (_health <= 0)
-            {
-                // Make the enemy disappear.
             }
         }
     }
