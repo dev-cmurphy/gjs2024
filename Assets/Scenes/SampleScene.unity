@@ -885,7 +885,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1618798826
 GameObject:
@@ -1036,11 +1036,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2569808348615396694, guid: eef96dc7d32f2f1468827044c4cafddc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.17
+      value: 30.44
       objectReference: {fileID: 0}
     - target: {fileID: 2569808348615396694, guid: eef96dc7d32f2f1468827044c4cafddc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7
+      value: 2.16
       objectReference: {fileID: 0}
     - target: {fileID: 2569808348615396694, guid: eef96dc7d32f2f1468827044c4cafddc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1166,15 +1166,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 755704120651250440, guid: 6bbd7de337fde824b86a28423df7cb9e, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 755704120651250440, guid: 6bbd7de337fde824b86a28423df7cb9e, type: 3}
       propertyPath: m_LinearDrag
-      value: 10
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 755704120651250440, guid: 6bbd7de337fde824b86a28423df7cb9e, type: 3}
       propertyPath: m_AngularDrag
-      value: 10
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 755704120651250440, guid: 6bbd7de337fde824b86a28423df7cb9e, type: 3}
       propertyPath: m_Interpolate
@@ -1242,7 +1242,11 @@ PrefabInstance:
       objectReference: {fileID: 47540665}
     - target: {fileID: 5005938520360011114, guid: 6bbd7de337fde824b86a28423df7cb9e, type: 3}
       propertyPath: _acceleration
-      value: 0.5
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005938520360011114, guid: 6bbd7de337fde824b86a28423df7cb9e, type: 3}
+      propertyPath: _sightDistance
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1306,8 +1310,7 @@ PrefabInstance:
       value: World
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 45099217347379767, guid: ee07153cea84075469cc7383b235d5ab, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee07153cea84075469cc7383b235d5ab, type: 3}
