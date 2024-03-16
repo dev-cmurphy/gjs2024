@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using kc.runtime.Assets.Scripts.Runtime.Enemy;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -24,6 +25,9 @@ namespace kc.runtime
         private float _maxJumpTime = 0.5f; // Maximum time the jump force can be applied
         private float _jumpTimeCounter; // How long the jump button has been held down
         private bool _isJumping; // Whether the player is currently holding the jump button after initiating a jump
+
+        [SerializeField]
+        private int _stompDamage;
 
         [SerializeField]
         private float _coyoteTime = 0.82f;
@@ -116,6 +120,22 @@ namespace kc.runtime
                     {
                         _currentCollider = collision.collider;
                         break;
+                    }
+                }
+            }
+            else if (collision.collider.CompareTag("Enemy"))
+            {
+                foreach (ContactPoint2D point in collision.contacts)
+                {
+                    // Check if the contact is approximately below us
+                    if (point.normal.y > 0.75f)
+                    {
+                        var enemy = collision.collider.GetComponentInParent<EnemyHealthSystem>();
+                        if (enemy)
+                        {
+                            // damage enemy
+                            enemy.loseHealth(_stompDamage);
+                        }
                     }
                 }
             }

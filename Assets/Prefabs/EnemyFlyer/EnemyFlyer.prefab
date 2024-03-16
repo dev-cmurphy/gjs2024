@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 4121953023802707197}
   - component: {fileID: 755704120651250440}
   - component: {fileID: 5005938520360011114}
+  - component: {fileID: 8319676466696490530}
   m_Layer: 0
   m_Name: EnemyFlyer
   m_TagString: Enemy
@@ -162,6 +163,22 @@ MonoBehaviour:
   _acceleration: 2
   _direction: {x: 0, y: 0}
   _sightDistance: 10
+--- !u!114 &8319676466696490530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4297928429062831546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 685fc3b031294104786516b627841cdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemy: {fileID: 4297928429062831546}
+  _maxHealth: 4
+  _damagePerBullet: 1
+  _damagePerStomp: 2
 --- !u!1 &6480792338455359426
 GameObject:
   m_ObjectHideFlags: 0

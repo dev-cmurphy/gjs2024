@@ -128,6 +128,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2569808348615396694, guid: eef96dc7d32f2f1468827044c4cafddc, type: 3}
   m_PrefabInstance: {fileID: 1848758221}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &136702778 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7638481130319980992, guid: f856cf1041df7c34c8aee48f8d6523b8, type: 3}
+  m_PrefabInstance: {fileID: 1995271999}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &166829752
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +401,18 @@ PrefabInstance:
     - target: {fileID: 5851480878197701208, guid: c3a04381f6d40d547bf95d41ccef89bc, type: 3}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574729193388997138, guid: c3a04381f6d40d547bf95d41ccef89bc, type: 3}
+      propertyPath: _enemy
+      value: 
+      objectReference: {fileID: 1489493945}
+    - target: {fileID: 6574729193388997138, guid: c3a04381f6d40d547bf95d41ccef89bc, type: 3}
+      propertyPath: _maxHealth
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574729193388997138, guid: c3a04381f6d40d547bf95d41ccef89bc, type: 3}
+      propertyPath: _damagePerStomp
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6843466004403819131, guid: c3a04381f6d40d547bf95d41ccef89bc, type: 3}
       propertyPath: _player
@@ -760,6 +777,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyGoomba (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6574729193388997138, guid: c3a04381f6d40d547bf95d41ccef89bc, type: 3}
+      propertyPath: _enemy
+      value: 
+      objectReference: {fileID: 1586938115}
     - target: {fileID: 7165269292850166074, guid: c3a04381f6d40d547bf95d41ccef89bc, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -887,6 +908,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1489493945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5422160252317165126, guid: c3a04381f6d40d547bf95d41ccef89bc, type: 3}
+  m_PrefabInstance: {fileID: 442013296}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1586938115 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5422160252317165126, guid: c3a04381f6d40d547bf95d41ccef89bc, type: 3}
+  m_PrefabInstance: {fileID: 1145878757}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1618798826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,13 +1061,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 129440549372388526, guid: eef96dc7d32f2f1468827044c4cafddc, type: 3}
+      propertyPath: _stompDamage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2569808348615396694, guid: eef96dc7d32f2f1468827044c4cafddc, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2569808348615396694, guid: eef96dc7d32f2f1468827044c4cafddc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.44
+      value: 7.87
       objectReference: {fileID: 0}
     - target: {fileID: 2569808348615396694, guid: eef96dc7d32f2f1468827044c4cafddc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1091,6 +1126,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3479171441461197010, guid: f856cf1041df7c34c8aee48f8d6523b8, type: 3}
+      propertyPath: _enemy
+      value: 
+      objectReference: {fileID: 136702778}
+    - target: {fileID: 3479171441461197010, guid: f856cf1041df7c34c8aee48f8d6523b8, type: 3}
+      propertyPath: _damagePerStomp
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5685789946939019083, guid: f856cf1041df7c34c8aee48f8d6523b8, type: 3}
       propertyPath: _player
       value: 
@@ -1247,6 +1290,14 @@ PrefabInstance:
     - target: {fileID: 5005938520360011114, guid: 6bbd7de337fde824b86a28423df7cb9e, type: 3}
       propertyPath: _sightDistance
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319676466696490530, guid: 6bbd7de337fde824b86a28423df7cb9e, type: 3}
+      propertyPath: _maxHealth
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319676466696490530, guid: 6bbd7de337fde824b86a28423df7cb9e, type: 3}
+      propertyPath: _damagePerStomp
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
