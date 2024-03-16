@@ -46,11 +46,12 @@ namespace kc.runtime
                         _currentCollider = collision.collider;
                         break;
                     }
-                    // Check if the contact is approximately beside us
+                    // Check if the contact is approximately to the left
                     else if (point.normal.x > 0.75f && collision.collider.CompareTag("Ground"))
                     {
                         _direction = 1;
                     }
+                    // Check if the contact is approximately to the right
                     else if (point.normal.x < -0.75f && collision.collider.CompareTag("Ground"))
                     {
                         _direction = -1;
