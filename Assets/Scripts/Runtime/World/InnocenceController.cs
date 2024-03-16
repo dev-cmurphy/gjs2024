@@ -9,16 +9,31 @@ namespace kc.runtime
     /// </summary>
     public class InnocenceController : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
+        private static InnocenceController _instance;
+
+        private int _guilt;
+
+        [SerializeField]
+        private int _guiltPerKill;
+
+        private void Awake()
         {
-        
+             _instance = this;
         }
 
-        // Update is called once per frame
-        void Update()
+        public static void CommitAct(int gravity)
         {
-        
+            _instance._guilt += gravity;
+        }
+
+        public static void Kill()
+        {
+            _instance._guilt += _instance._guiltPerKill;
+        }
+
+        public static int GetGuilt()
+        {
+            return _instance._guilt;
         }
     }
 }
