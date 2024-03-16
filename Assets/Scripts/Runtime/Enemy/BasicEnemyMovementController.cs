@@ -19,7 +19,6 @@ namespace kc.runtime
 
         private Rigidbody2D _rigidbody;
 
-        private Vector2 _lastInput;
         private bool _isGrounded;
 
         private void Awake()
@@ -29,12 +28,19 @@ namespace kc.runtime
 
         private void Update()
         {
-            // Move in the direction of the player
+            
             int direction = -1;
-            if (_player.transform.position.x > _rigidbody.position.x)
+            // Fall straight if not grounded
+            if (!_isGrounded)
+            {
+                direction = 0;
+            }
+            // Move in the direction of the player
+            else if (_player.transform.position.x > _rigidbody.position.x)
             {
                 direction = 1;
             }
+
             _rigidbody.velocity = new Vector2(direction * _speed, _rigidbody.velocity.y);
         }
 
