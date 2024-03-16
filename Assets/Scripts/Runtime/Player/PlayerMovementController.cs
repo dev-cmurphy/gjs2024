@@ -158,6 +158,7 @@ namespace kc.runtime
                         {
                             // damage enemy
                             enemy.loseHealth(_stompDamage);
+                            _rigidbody.AddForce(new Vector2(0f, _jumpForce * 2f), ForceMode2D.Impulse);
                         }
                     }
                 }
