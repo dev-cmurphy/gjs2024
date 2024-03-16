@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F8E5FF5D-3256-4EDF-8100-EFA8A6426D41}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="NPC" ID="{F8E5FF5D-3256-4EDF-8100-EFA8A6426D41}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="4"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Event Name="Play_NPC_Hurt" ID="{6DB905DB-D107-499F-9950-29419D1E7B60}">
+					<ChildrenList>
+						<Action Name="" ID="{09A6EAE1-0062-4A3C-9612-0F16AB76993F}" ShortID="591500623">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SQ_NPC_Hurt_Dry" ID="{46DCED5C-55BC-485B-9742-FF7D987A3912}" WorkUnitID="{DA2CEEB3-E224-412F-AE49-231F385863BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5B87DB19-3315-40FA-881B-087CA767EAEF}" ShortID="906566369">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SQ_NPC_Hurt_Wet" ID="{B4E8E246-986C-4E1F-A9D5-E336B1A5FE24}" WorkUnitID="{DA2CEEB3-E224-412F-AE49-231F385863BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

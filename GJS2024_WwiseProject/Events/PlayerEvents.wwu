@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{90193F73-76D2-4234-8628-F83C132E1C98}" SchemaVersion="119" RootDocumentID="{0DB3F366-573D-4E5D-A4BC-A7DB8C3661C5}" ParentDocumentID="{0DB3F366-573D-4E5D-A4BC-A7DB8C3661C5}">
+<WwiseDocument Type="WorkUnit" ID="{90193F73-76D2-4234-8628-F83C132E1C98}" SchemaVersion="119">
 	<Events>
-		<WorkUnit Name="PlayerEvents" ID="{90193F73-76D2-4234-8628-F83C132E1C98}" OwnerID="{0DB3F366-573D-4E5D-A4BC-A7DB8C3661C5}" PersistMode="Nested">
+		<WorkUnit Name="PlayerEvents" ID="{90193F73-76D2-4234-8628-F83C132E1C98}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="10"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
 			<ChildrenList>
 				<Event Name="Play_Player_Footsteps_Walk" ID="{F86B36CB-1F7C-42CF-B252-19E6289CB629}">
 					<ChildrenList>
 						<Action Name="" ID="{2EE5787F-D1EC-4E0F-88F9-D84A131E8B96}" ShortID="54925850">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SW_Player_Footsteps_Materials" ID="{376FE01B-9F0D-47E2-A976-92EAD103AA71}" WorkUnitID="{4DC3D2E2-C950-4D45-A4B9-C9E5FE4EBE16}"/>
+									<ObjectRef Name="SW_NPC_Footsteps_Materials" ID="{376FE01B-9F0D-47E2-A976-92EAD103AA71}" WorkUnitID="{DA2CEEB3-E224-412F-AE49-231F385863BC}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -33,7 +37,18 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SW_Player_Footsteps_Materials" ID="{376FE01B-9F0D-47E2-A976-92EAD103AA71}" WorkUnitID="{4DC3D2E2-C950-4D45-A4B9-C9E5FE4EBE16}"/>
+									<ObjectRef Name="SW_NPC_Footsteps_Materials" ID="{376FE01B-9F0D-47E2-A976-92EAD103AA71}" WorkUnitID="{DA2CEEB3-E224-412F-AE49-231F385863BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_TouchGround" ID="{225F29C4-635F-41E4-804B-A4F79DE224EC}">
+					<ChildrenList>
+						<Action Name="" ID="{8D1D5C66-75F2-487E-A831-3AE61F77AA9B}" ShortID="569801431">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SQ_Player_TouchGround" ID="{11D34C5F-5455-4667-89F6-02F13DA85A0A}" WorkUnitID="{4DC3D2E2-C950-4D45-A4B9-C9E5FE4EBE16}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

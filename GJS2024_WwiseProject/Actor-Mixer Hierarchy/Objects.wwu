@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3AB6B07D-D8C8-4EA5-8923-90CE969EAD9F}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="Objects" ID="{3AB6B07D-D8C8-4EA5-8923-90CE969EAD9F}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="19"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<ActorMixer Name="MixerGun" ID="{96545FA0-6E87-4807-9F39-DBE8B9C087B7}" ShortID="204732726">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="SQ_Gun_Shot" ID="{5F0A4CA1-F261-4196-B3C7-36F9A2B96B31}" ShortID="955190230">
+							<PropertyList>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="RDM_Gun_Shot" ID="{0D0F1145-3E65-4910-B0AD-279F19803E8E}" ShortID="902771464">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{23D9159F-A1EF-4D5C-8574-C9EEA73A6507}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="16"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{97D0E4D0-5BDA-490D-9582-20A925F10721}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="4"/>
+															<Property Name="Min" Type="Real64" Value="-4"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_Pistol_Shot_01" ID="{0CE278A0-CC58-4FC1-8E03-89CD7E5E3799}" ShortID="1061690173">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{75FC8EDA-CE30-4F39-8488-464EDFEDC9E8}">
+																<PropertyList>
+																	<Property Name="Max" Type="Real64" Value="3"/>
+																	<Property Name="Min" Type="Real64" Value="-3"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Pistol_Shot_01" ID="{00EA1A5C-485D-46D1-9085-728EF1D7B928}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Pistol_Shot_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="912724457"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Pistol_Shot_01" ID="{00EA1A5C-485D-46D1-9085-728EF1D7B928}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Pistol_Shot_02" ID="{5C1569AC-220A-44C1-8BE3-0F3456DBF769}" ShortID="774162374">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Pistol_Shot_02" ID="{CECF2D4D-1253-4523-A478-B89F0C916E93}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Pistol_Shot_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="278022189"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Pistol_Shot_02" ID="{CECF2D4D-1253-4523-A478-B89F0C916E93}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Pistol_Shot_03" ID="{4F6F9F9D-D7CD-4AA5-A519-D61AD947C97C}" ShortID="56220661">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Pistol_Shot_03" ID="{349A82D0-9586-4438-BBD8-80C6DBEA60A1}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Pistol_Shot_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="165681694"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Pistol_Shot_03" ID="{349A82D0-9586-4438-BBD8-80C6DBEA60A1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Pistol_Shot_04" ID="{F06D0C94-C737-44B8-96F4-CF0BDBA388D4}" ShortID="752010940">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Pistol_Shot_04" ID="{4D9F813B-10C4-464B-A9AC-E3F8B41CD39F}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Pistol_Shot_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="11348344"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Pistol_Shot_04" ID="{4D9F813B-10C4-464B-A9AC-E3F8B41CD39F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<Reference>
+										<ObjectRef Name="RDM_Gun_Shot" ID="{0D0F1145-3E65-4910-B0AD-279F19803E8E}" WorkUnitID="{3AB6B07D-D8C8-4EA5-8923-90CE969EAD9F}"/>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

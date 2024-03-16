@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{808A93E9-0331-48EA-97E3-2C4836F5B149}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="ObjectsEvents" ID="{808A93E9-0331-48EA-97E3-2C4836F5B149}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="19"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Event Name="Play_Gun_Shot" ID="{A76ABBE1-422A-4FDE-8A2E-09A903403269}">
+					<ChildrenList>
+						<Action Name="" ID="{60F8F78A-8058-47BB-AA38-20A86C65F568}" ShortID="702049448">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SQ_Gun_Shot" ID="{5F0A4CA1-F261-4196-B3C7-36F9A2B96B31}" WorkUnitID="{3AB6B07D-D8C8-4EA5-8923-90CE969EAD9F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

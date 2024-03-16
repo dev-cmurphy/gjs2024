@@ -14,8 +14,16 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Play_Gun_Shot" ID="{A76ABBE1-422A-4FDE-8A2E-09A903403269}" WorkUnitID="{808A93E9-0331-48EA-97E3-2C4836F5B149}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Stop_Player_Footsteps_Walk" ID="{2FC2EEE8-D820-4C54-98C1-E610611A4EFE}" WorkUnitID="{90193F73-76D2-4234-8628-F83C132E1C98}"/>
 							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_NPC_Hurt" ID="{6DB905DB-D107-499F-9950-29419D1E7B60}" WorkUnitID="{F8E5FF5D-3256-4EDF-8100-EFA8A6426D41}"/>
+							<Position X="2" Y="0"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
