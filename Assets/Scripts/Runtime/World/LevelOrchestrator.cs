@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace kc.runtime
@@ -10,16 +11,25 @@ namespace kc.runtime
     public class LevelOrchestrator : MonoBehaviour
     {
 
-        // Use this for initialization
-        void Start()
-        {
+        private static List<EnemyActivator> _activators = new List<EnemyActivator>();
 
+
+        private void FixedUpdate()
+        {
+            for(int i = 0; i <  _activators.Count; i++)
+            {
+                _activators[i].Check();
+            }
         }
 
-        // Update is called once per frame
-        void Update()
+        public static void RegisterActivator(EnemyActivator enemyActivator)
         {
+            _activators.Add(enemyActivator);
+        }
 
+        public static void UnregisterActivator(EnemyActivator enemyActivator)
+        {
+            _activators.Remove(enemyActivator);
         }
     }
 }

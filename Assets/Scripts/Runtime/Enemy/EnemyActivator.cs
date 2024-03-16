@@ -20,13 +20,15 @@ namespace kc.runtime
         // on ne check plus si le joueur est trop proche
         private float _minActivationRange;
 
+
         private void Awake()
         {
+            LevelOrchestrator.RegisterActivator(this);
             this.gameObject.SetActive(false);
         }
 
         // Update is called once per frame
-        void FixedUpdate()
+        public void Check()
         {
             float dist = Vector2.Distance(transform.position, PlayerMovementController.PlayerPosition());
             if (dist < _activationRange && dist > _minActivationRange)
@@ -40,11 +42,16 @@ namespace kc.runtime
             if (gameObject.activeSelf)
                 return;
 
-            if (InnocenceController.GetGuilt() > _guiltTreshold)
+            if (InnocenceController.GetGuilt() >= _guiltTreshold)
             {
                 Debug.Log($"Activating {gameObject.name}");
                 this.gameObject.SetActive(true);
             }
+        }
+
+        private void OnDestroy()
+        {
+            LevelOrchestrator.UnregisterActivator(this);
         }
     }
 }
