@@ -4,7 +4,10 @@ using UnityEngine;
 
 namespace kc.runtime
 {
-    public class dummy : MonoBehaviour
+    /// <summary>
+    /// Fait le suivi de l'innocence du joueur
+    /// </summary>
+    public class InnocenceController : MonoBehaviour
     {
         // Start is called before the first frame update
         void Start()
