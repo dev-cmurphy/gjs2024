@@ -84,7 +84,7 @@ namespace kc.runtime
             }
 
 
-            Debug.Log($"Can jump: {CanJump()}");
+            // Debug.Log($"Can jump: {CanJump()}");
         }
 
         private void OnCollisionEnter2D(Collision2D collision)

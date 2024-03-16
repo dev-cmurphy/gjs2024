@@ -17,46 +17,104 @@ namespace kc.runtime
         [SerializeField]
         private float _speed;
 
+        [SerializeField]
+        private int _maxHealth;
+        private int _health;
+
+        [SerializeField]
+        private int _damagePerBullet;
+
+        [SerializeField]
+        private int _damagePerStomp;
+
         private Rigidbody2D _rigidbody;
 
-        private bool _isGrounded;
+        private Collider2D _currentCollider;
+
+        private int _direction;
 
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
+
+            _health = _maxHealth;
+
+            _direction = 0;
         }
 
         private void Update()
         {
-            
-            int direction = -1;
-            // Fall straight if not grounded
-            if (!_isGrounded)
-            {
-                direction = 0;
-            }
-            // Move in the direction of the player
-            else if (_player.transform.position.x > _rigidbody.position.x)
-            {
-                direction = 1;
-            }
-
-            _rigidbody.velocity = new Vector2(direction * _speed, _rigidbody.velocity.y);
+            _rigidbody.velocity = new Vector2(_direction * _speed, _rigidbody.velocity.y);
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.collider.tag == "Ground") // Make sure your ground has the tag "Ground"
+            if (collision.collider.CompareTag("Ground")) // Make sure your ground has the tag "Ground"
             {
-                _isGrounded = true;
+                foreach (ContactPoint2D point in collision.contacts)
+                {
+                    // Check if the contact is approximately below us
+                    if (point.normal.y > 0.75f && collision.collider.CompareTag("Ground"))
+                    {
+                        _currentCollider = collision.collider;
+                        break;
+                    }
+                }
+            }
+            if (collision.collider.CompareTag("Ground"))
+            {
+                foreach (ContactPoint2D point in collision.contacts)
+                {
+                    // Check if the contact is approximately beside us
+                    if (point.normal.x > 0.75f && collision.collider.CompareTag("Ground"))
+                    {
+                        Debug.Log($"Collision to left");
+                        _direction = 1;
+                    }
+                    else if (point.normal.x < -0.75f && collision.collider.CompareTag("Ground"))
+                    {
+                        Debug.Log($"Collision to right");
+                        _direction = -1;
+                    }
+                }
+            }
+            if (collision.collider.CompareTag("Player"))
+            {
+                foreach (ContactPoint2D point in collision.contacts)
+                {
+                    // Check if the contact is approximately above us
+                    if (point.normal.y > 0.75f && collision.collider.CompareTag("Player"))
+                    {
+                        loseHealth(_damagePerStomp);
+                    }
+                }
+            }
+            if (collision.collider.CompareTag("Bullet")) // Change for wtv the projectile tag is
+            {
+                loseHealth(_damagePerBullet);
             }
         }
 
         private void OnCollisionExit2D(Collision2D collision)
         {
-            if (collision.collider.tag == "Ground")
+            if (collision.collider == _currentCollider)
             {
-                _isGrounded = false;
+                _currentCollider = null;
+            }
+        }
+
+        private bool isFalling()
+        {
+            return _currentCollider == null;
+        }
+
+        private void loseHealth(int damage)
+        {
+            _health -= damage;
+
+            if (_health <= 0)
+            {
+                // Make the enemy disappear.
             }
         }
     }
