@@ -49,8 +49,11 @@ namespace kc.runtime
 
         private Vector2 _startPos;
 
+        private static PlayerMovementController _instance;
+
         private void Awake()
         {
+            _instance = this;
             _startPos = transform.position;
             _rigidbody = GetComponent<Rigidbody2D>();
 
@@ -96,6 +99,11 @@ namespace kc.runtime
         private void EndJump()
         {
             _isJumping = false;
+        }
+
+        public static Vector2 PlayerPosition()
+        {
+            return _instance.transform.position;
         }
 
         private void Update()
