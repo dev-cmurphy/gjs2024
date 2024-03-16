@@ -37,7 +37,7 @@ namespace kc.runtime
         private InputAction _moveAction, _jumpAction;
 
         private Vector2 _lastInput;
-        private Collider2D _currentCollider;
+        private Collider2D _currentGroundCollider;
         // STATE MACHINE ?
 
         private float _coyoteTimer;
@@ -86,7 +86,7 @@ namespace kc.runtime
 
         private void Update()
         {
-            if (_currentCollider == null)
+            if (_currentGroundCollider == null)
             {
                 _coyoteTimer += Time.deltaTime;
             }
@@ -114,7 +114,7 @@ namespace kc.runtime
                     // Check if the contact is approximately below us
                     if (point.normal.y > 0.75f)
                     {
-                        _currentCollider = collision.collider;
+                        _currentGroundCollider = collision.collider;
                         break;
                     }
                 }
@@ -123,16 +123,21 @@ namespace kc.runtime
 
         private void OnCollisionExit2D(Collision2D collision)
         {
-            if (collision.collider == _currentCollider)
+            if (collision.collider == _currentGroundCollider)
             {
-                _currentCollider = null;
+                _currentGroundCollider = null;
                 _coyoteTimer = 0;
             }
         }
 
+        public bool IsAirborne()
+        {
+            return _isJumping;
+        }
+
         private bool CanJump()
         {
-            return _currentCollider != null || (_coyoteTimer < _coyoteTime && _lastJumpTimer > _coyoteTime);
+            return _currentGroundCollider != null || (_coyoteTimer < _coyoteTime && _lastJumpTimer > _coyoteTime);
         }
     }
 }
