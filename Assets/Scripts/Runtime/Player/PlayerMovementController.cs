@@ -33,6 +33,9 @@ namespace kc.runtime
         private float _coyoteTime = 0.82f;
 
         [SerializeField]
+        private float _jumpGroundMinimumDist = 0.1f;
+
+        [SerializeField]
         private UnityEvent _onJump = new UnityEvent();
 
 
@@ -96,6 +99,7 @@ namespace kc.runtime
                 _lastJumpTimer = 0;
                 _isJumping = true;
                 _jumpTimeCounter = _maxJumpTime;
+                ResetVerticalVelocity();
                 _rigidbody.AddForce(new Vector2(0f, _jumpForce), ForceMode2D.Impulse);
             }
         }
@@ -131,6 +135,13 @@ namespace kc.runtime
             }
         }
 
+        private void ResetVerticalVelocity()
+        {
+            Vector2 resetVel = _rigidbody.velocity;
+            resetVel.y = 0;
+            _rigidbody.velocity = resetVel;
+        }
+
         private void OnCollisionEnter2D(Collision2D collision)
         {
             if (collision.collider.CompareTag("Ground")) // Make sure your ground has the tag "Ground"
@@ -158,7 +169,8 @@ namespace kc.runtime
                         {
                             // damage enemy
                             enemy.loseHealth(_stompDamage);
-                            _rigidbody.AddForce(new Vector2(0f, _jumpForce * 2f), ForceMode2D.Impulse);
+                            ResetVerticalVelocity();
+                            _rigidbody.AddForce(new Vector2(0f, _jumpForce), ForceMode2D.Impulse);
                         }
                     }
                 }
@@ -181,7 +193,20 @@ namespace kc.runtime
 
         private bool CanJump()
         {
-            return _currentGroundCollider != null || (_coyoteTimer < _coyoteTime && _lastJumpTimer > _coyoteTime);
+            bool isCloseEnoughToGround = false;
+
+            // here, check with a raycast if the player is close enough (the float variable _jumpGroundMinimumDist exists)
+            // and assign the result to the boolean
+
+            int layerMask = ~(1 << LayerMask.NameToLayer("Player"));
+
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, _jumpGroundMinimumDist, layerMask);
+            if (hit.collider != null)
+            {
+                isCloseEnoughToGround = hit.collider.CompareTag("Ground") || hit.collider.CompareTag("Enemy");
+            }
+
+            return isCloseEnoughToGround || _currentGroundCollider != null || (_coyoteTimer < _coyoteTime && _lastJumpTimer > _coyoteTime);
         }
     }
 }

@@ -15,6 +15,9 @@ namespace kc.runtime
         private float _speed;
 
         [SerializeField]
+        private Animator _animator;
+
+        [SerializeField]
         private int _direction;
 
         private Rigidbody2D _rigidbody;
@@ -29,6 +32,8 @@ namespace kc.runtime
         private void Update()
         {
             _rigidbody.velocity = new Vector2(_direction * _speed, _rigidbody.velocity.y);
+
+            _animator.SetFloat("horizontal", _rigidbody.velocity.x);
         }
 
         private void OnCollisionEnter2D(Collision2D collision)

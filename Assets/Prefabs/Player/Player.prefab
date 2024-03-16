@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1300193928601071941}
   - component: {fileID: 8928373197968442652}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hitbox
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5750516945084870546}
   - component: {fileID: 5818652472831251771}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2777964823626739298}
   - component: {fileID: 1395869411120335383}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundCollider
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 1870020283582341915}
   - component: {fileID: 2776265937892524137}
   - component: {fileID: 7747080197180118317}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -285,7 +285,9 @@ MonoBehaviour:
   _jumpForce: 9
   _speed: 5
   _maxJumpTime: 0.65
-  _coyoteTime: 0.82
+  _stompDamage: 2
+  _coyoteTime: 0.15
+  _jumpGroundMinimumDist: 0.4
   _onJump:
     m_PersistentCalls:
       m_Calls:
@@ -452,7 +454,7 @@ GameObject:
   - component: {fileID: 2109319461869586420}
   - component: {fileID: 2502139657431455}
   - component: {fileID: 272743514311856823}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
