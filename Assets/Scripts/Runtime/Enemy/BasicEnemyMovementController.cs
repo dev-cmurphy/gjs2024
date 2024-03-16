@@ -39,7 +39,7 @@ namespace kc.runtime
 
             _health = _maxHealth;
 
-            _direction = 0;
+            _direction = -1;
         }
 
         private void Update()
