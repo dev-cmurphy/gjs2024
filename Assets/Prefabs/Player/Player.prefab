@@ -173,6 +173,8 @@ GameObject:
   - component: {fileID: 129440549372388526}
   - component: {fileID: 5527477921505855898}
   - component: {fileID: 1979835219747689473}
+  - component: {fileID: 8349962794345106824}
+  - component: {fileID: 1870020283582341915}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -270,3 +272,40 @@ MonoBehaviour:
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!95 &8349962794345106824
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4462870651193977099}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ca595399e53929d4cb8a6c5dc6e3bcb7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1870020283582341915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4462870651193977099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37680dbf5bcab3d49b77c294d25779eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectileSpeed: 10
+  _firingRate: 3
+  _damage: 3
+  _projectilePrefab: {fileID: 972238428805841766, guid: caac374b05898fe4e8d01a0ec79315d1, type: 3}

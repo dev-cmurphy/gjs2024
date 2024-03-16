@@ -82,9 +82,6 @@ namespace kc.runtime
                 _rigidbody.AddForce(new Vector2(0f, _jumpForce) * _jumpTimeCounter, ForceMode2D.Force);
                 _jumpTimeCounter -= Time.deltaTime;
             }
-
-
-            Debug.Log($"Can jump: {CanJump()}");
         }
 
         private void OnCollisionEnter2D(Collision2D collision)

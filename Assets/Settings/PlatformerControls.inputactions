@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Shoot",
+                    "type": "Button",
+                    "id": "7c08d161-bed5-4adb-ae10-18dfb5f39d2c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -50,7 +59,7 @@
                 {
                     "name": "down",
                     "id": "ec8125f3-301a-461e-b7ae-81de1a7921c1",
-                    "path": "<Keyboard>/s",
+                    "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "KB&M",
@@ -61,7 +70,7 @@
                 {
                     "name": "left",
                     "id": "03fbe3de-c121-4c38-ad31-893d131310d3",
-                    "path": "<Keyboard>/a",
+                    "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "KB&M",
@@ -72,7 +81,7 @@
                 {
                     "name": "right",
                     "id": "0c17df14-285e-46f9-ab3d-7b8056385df8",
-                    "path": "<Keyboard>/d",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "KB&M",
@@ -88,6 +97,17 @@
                     "processors": "",
                     "groups": "KB&M",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "467b94c7-b361-43d8-bde9-795659bae4b7",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KB&M",
+                    "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
