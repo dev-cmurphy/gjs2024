@@ -31,6 +31,10 @@ namespace kc.runtime
         [SerializeField]
         private UnityEvent _onJump = new UnityEvent();
 
+
+        [SerializeField]
+        private UnityEvent _onTouchGround = new UnityEvent();
+
         private Rigidbody2D _rigidbody;
         private PlayerInput _input;
 
@@ -115,6 +119,7 @@ namespace kc.runtime
                     if (point.normal.y > 0.75f)
                     {
                         _currentGroundCollider = collision.collider;
+                        _onTouchGround.Invoke();
                         break;
                     }
                 }
