@@ -17,6 +17,9 @@ namespace kc.runtime
         private int _damage;
 
         [SerializeField]
+        private float _bulletLifetime = 3f;
+
+        [SerializeField]
         private PlayerProjectile _projectilePrefab;
 
 
@@ -56,7 +59,7 @@ namespace kc.runtime
             _fireTimer = 0;
             PlayerProjectile projectile = Instantiate(_projectilePrefab);
 
-            projectile.Initialize(transform.position + transform.right, transform.right * _projectileSpeed , _damage);
+            projectile.Initialize(transform.position + transform.right, transform.right * _projectileSpeed , _damage, _bulletLifetime);
         }
 
         private bool CanShoot()

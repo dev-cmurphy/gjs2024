@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using kc.runtime.Assets.Scripts.Runtime.Enemy;
+using System.Collections;
 using Unity.VisualScripting.YamlDotNet.Serialization;
 using UnityEngine;
 
@@ -9,9 +10,10 @@ namespace kc.runtime
     {
         private int _damage;
         private Rigidbody2D _body;
+        private float _lifeTime;
+        private float _lifeTimer;
 
-
-        public void Initialize(Vector2 spawnPoint, Vector2 velocity, int damage)
+        public void Initialize(Vector2 spawnPoint, Vector2 velocity, int damage, float lifetime)
         {
             _body = GetComponent<Rigidbody2D>();
             _body.isKinematic = true;
@@ -19,15 +21,37 @@ namespace kc.runtime
             _body.position = spawnPoint;
 
             _body.velocity = velocity;
+            _lifeTime = lifetime;
+            _lifeTimer = 0;
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.TryGetComponent<BasicEnemyMovementController>(out var comp))
+            var enemy = collision.GetComponentInParent<EnemyHealthSystem>();
+            if (enemy)
             {
                 // damage enemy
-                Debug.Log("Will damage enemy from this place in code.");
+                enemy.loseHealth(_damage);
+                TriggerDestruction();
             }
         }
+
+        public void TriggerDestruction()
+        {
+            Destroy(this.gameObject);
+        }
+
+        private void Update()
+        {
+            _lifeTimer += Time.deltaTime;
+
+            if (_lifeTimer > _lifeTime)
+            {
+                _lifeTimer = 0;
+                TriggerDestruction();
+            }
+        }
+
+        // lifetime : kill after X time or on collision
     }
 }
