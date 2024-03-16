@@ -6,6 +6,7 @@
 				<SoundBank Name="Soundbanks" ID="{EE6E5073-35EE-4434-9B07-9A2027CCDF61}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_TouchGround" ID="{225F29C4-635F-41E4-804B-A4F79DE224EC}" WorkUnitID="{90193F73-76D2-4234-8628-F83C132E1C98}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Music" ID="{72D1101A-0A5B-428D-8EE3-22FF9C0E2A71}" WorkUnitID="{BE3B8A77-C15D-4E4D-B09B-1688F1C40650}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Player_Footsteps_Walk" ID="{F86B36CB-1F7C-42CF-B252-19E6289CB629}" WorkUnitID="{90193F73-76D2-4234-8628-F83C132E1C98}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Player_Jump" ID="{548C2F19-5B74-439F-8C7E-C93BB28338B9}" WorkUnitID="{90193F73-76D2-4234-8628-F83C132E1C98}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_NPC_Hurt" ID="{6DB905DB-D107-499F-9950-29419D1E7B60}" WorkUnitID="{F8E5FF5D-3256-4EDF-8100-EFA8A6426D41}" Origin="Manual" Filter="7"/>
