@@ -1148,11 +1148,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2569808348615396694, guid: eef96dc7d32f2f1468827044c4cafddc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.42
+      value: 30.48
       objectReference: {fileID: 0}
     - target: {fileID: 2569808348615396694, guid: eef96dc7d32f2f1468827044c4cafddc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.55
+      value: 2.42
       objectReference: {fileID: 0}
     - target: {fileID: 2569808348615396694, guid: eef96dc7d32f2f1468827044c4cafddc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1229,11 +1229,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6120418588454569547, guid: f856cf1041df7c34c8aee48f8d6523b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.84
+      value: 24.21
       objectReference: {fileID: 0}
     - target: {fileID: 6120418588454569547, guid: f856cf1041df7c34c8aee48f8d6523b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.71
+      value: 1.69
       objectReference: {fileID: 0}
     - target: {fileID: 6120418588454569547, guid: f856cf1041df7c34c8aee48f8d6523b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1266,6 +1266,14 @@ PrefabInstance:
     - target: {fileID: 6120418588454569547, guid: f856cf1041df7c34c8aee48f8d6523b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297434689573996525, guid: f856cf1041df7c34c8aee48f8d6523b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297434689573996525, guid: f856cf1041df7c34c8aee48f8d6523b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.14
       objectReference: {fileID: 0}
     - target: {fileID: 7638481130319980992, guid: f856cf1041df7c34c8aee48f8d6523b8, type: 3}
       propertyPath: m_Name
@@ -1341,7 +1349,8 @@ PrefabInstance:
       value: World
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 45099217347379767, guid: ee07153cea84075469cc7383b235d5ab, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee07153cea84075469cc7383b235d5ab, type: 3}
