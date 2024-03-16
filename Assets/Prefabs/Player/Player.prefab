@@ -288,7 +288,7 @@ MonoBehaviour:
   _maxJumpTime: 0.65
   _stompDamage: 2
   _coyoteTime: 0.15
-  _jumpGroundMinimumDist: 1
+  _jumpGroundMinimumDist: 0.6
   _onJump:
     m_PersistentCalls:
       m_Calls:
@@ -389,10 +389,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37680dbf5bcab3d49b77c294d25779eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectileSpeed: 10
-  _firingRate: 3
+  _projectileSpeed: 25
+  _firingRate: 5
   _damage: 3
-  _bulletLifetime: 3
+  _bulletLifetime: 2
   _projectilePrefab: {fileID: 972238428805841766, guid: caac374b05898fe4e8d01a0ec79315d1, type: 3}
   _onShoot:
     m_PersistentCalls:

@@ -222,7 +222,7 @@ namespace kc.runtime
             {
                 isCloseEnoughToGround = hit.collider.CompareTag("Ground") || hit.collider.CompareTag("Enemy");
 
-                if (_rigidbody.velocity.y < 0f)
+                if (_rigidbody.velocity.y > 0f)
                 {
                     isCloseEnoughToGround = false;
                 }
