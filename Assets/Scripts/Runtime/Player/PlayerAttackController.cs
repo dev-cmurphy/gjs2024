@@ -26,9 +26,14 @@ namespace kc.runtime
         [SerializeField]
         private UnityEvent _onShoot;
 
+        [SerializeField]
+        private PlayerMovementController _movement;
+
 
         private PlayerInput _input;
         private InputAction _shootAction;
+
+        private int _shotDirection = 1;
 
         private float _fireTimer = 0;
 
@@ -45,6 +50,14 @@ namespace kc.runtime
         {
             _fireTimer += Time.deltaTime;
 
+            if (_movement.IsLeft())
+            {
+                _shotDirection = -1;
+            }
+            else
+            {
+                _shotDirection = 1;
+            }
         }
 
         private void FixedUpdate()
@@ -65,7 +78,7 @@ namespace kc.runtime
             _fireTimer = 0;
             PlayerProjectile projectile = Instantiate(_projectilePrefab);
 
-            projectile.Initialize(transform.position + transform.right, transform.right * _projectileSpeed , _damage, _bulletLifetime);
+            projectile.Initialize(transform.position + (_shotDirection * transform.right), (_shotDirection * transform.right) * _projectileSpeed , _damage, _bulletLifetime);
         }
 
         private bool CanShoot()

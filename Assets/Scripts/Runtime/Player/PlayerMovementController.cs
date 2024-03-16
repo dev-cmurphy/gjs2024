@@ -38,6 +38,9 @@ namespace kc.runtime
         [SerializeField]
         private UnityEvent _onJump = new UnityEvent();
 
+        [SerializeField]
+        private float _maxVel = 3f;
+
 
         [SerializeField]
         private UnityEvent _onTouchGround = new UnityEvent();
@@ -71,6 +74,8 @@ namespace kc.runtime
 
             _coyoteTimer = 0;
             _lastJumpTimer = 0;
+
+            _isLeft = false;
         }
 
         private void ResetPlayer(InputAction.CallbackContext obj)
@@ -127,12 +132,24 @@ namespace kc.runtime
             _lastInput = _moveAction.ReadValue<Vector2>();
             _rigidbody.velocity = new Vector2(_lastInput.x * _speed, _rigidbody.velocity.y);
 
+            if (_lastInput.x < 0f)
+            {
+                _isLeft = true;
+            }
+
+            if (_lastInput.x > 0f)
+            {
+                _isLeft = false;
+            }
+
             // Jump Time Extension
             if (_isJumping && _jumpTimeCounter > 0)
             {
                 _rigidbody.AddForce(new Vector2(0f, _jumpForce) * _jumpTimeCounter, ForceMode2D.Force);
                 _jumpTimeCounter -= Time.deltaTime;
             }
+
+            _rigidbody.velocity = Vector2.ClampMagnitude(_rigidbody.velocity, _maxVel);
         }
 
         private void ResetVerticalVelocity()
@@ -212,6 +229,13 @@ namespace kc.runtime
             }
 
             return isCloseEnoughToGround || _currentGroundCollider != null || (_coyoteTimer < _coyoteTime && _lastJumpTimer > _coyoteTime);
+        }
+
+        private bool _isLeft;
+
+        public bool IsLeft()
+        {
+            return _isLeft;
         }
     }
 }
