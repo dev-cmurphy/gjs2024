@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 namespace kc.runtime
@@ -21,6 +22,9 @@ namespace kc.runtime
 
         [SerializeField]
         private PlayerProjectile _projectilePrefab;
+
+        [SerializeField]
+        private UnityEvent _onShoot;
 
 
         private PlayerInput _input;
@@ -56,6 +60,8 @@ namespace kc.runtime
             if (!CanShoot())
                 return;
 
+
+            _onShoot.Invoke();
             _fireTimer = 0;
             PlayerProjectile projectile = Instantiate(_projectilePrefab);
 

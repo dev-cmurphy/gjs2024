@@ -6,7 +6,7 @@ namespace kc.runtime
     public class PlayerAudio : MonoBehaviour
     {
         [SerializeField]
-        private AK.Wwise.Event _startWalkEvent, _stopWalkEvent, _jumpEvent, _touchGroundEvent;
+        private AK.Wwise.Event _startWalkEvent, _stopWalkEvent, _jumpEvent, _touchGroundEvent, _shootEvent;
 
         [SerializeField]
         private Rigidbody2D _body;
@@ -53,6 +53,11 @@ namespace kc.runtime
         public void TouchGround()
         {
             _touchGroundEvent.Post(gameObject);
+        }
+
+        public void Shoot()
+        {
+            _shootEvent.Post(gameObject);
         }
     }
 }

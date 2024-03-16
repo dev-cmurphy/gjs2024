@@ -390,6 +390,21 @@ MonoBehaviour:
   _damage: 3
   _bulletLifetime: 3
   _projectilePrefab: {fileID: 972238428805841766, guid: caac374b05898fe4e8d01a0ec79315d1, type: 3}
+  _onShoot:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 272743514311856823}
+        m_TargetAssemblyTypeName: kc.runtime.PlayerAudio, kc.runtime
+        m_MethodName: Shoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &2776265937892524137
 Animator:
   serializedVersion: 5
@@ -509,6 +524,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 469fbc4594d970d489873e6c22696543, type: 2}
+  _shootEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e7f46b51f9ab19d409925540b3b13d05, type: 2}
   _body: {fileID: 5527477921505855898}
   _akGameObj: {fileID: 2502139657431455}
   _movement: {fileID: 129440549372388526}
