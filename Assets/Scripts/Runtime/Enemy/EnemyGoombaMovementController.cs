@@ -6,11 +6,8 @@ namespace kc.runtime
     /// S'occupe du mouvement d'un ennemi de base
     /// </summary>
     [RequireComponent(typeof(Rigidbody2D))]
-    public class BasicEnemyMovementController : MonoBehaviour
+    public class EnemyGoombaMovementController : MonoBehaviour
     {
-        [SerializeField]
-        private Transform _player;
-
         [SerializeField]
         private float _acceleration;
 
@@ -46,11 +43,12 @@ namespace kc.runtime
                         _currentCollider = collision.collider;
                         break;
                     }
-                    // Check if the contact is approximately beside us
+                    // Check if the contact is approximately to the left
                     else if (point.normal.x > 0.75f && collision.collider.CompareTag("Ground"))
                     {
                         _direction = 1;
                     }
+                    // Check if the contact is approximately to the right
                     else if (point.normal.x < -0.75f && collision.collider.CompareTag("Ground"))
                     {
                         _direction = -1;
