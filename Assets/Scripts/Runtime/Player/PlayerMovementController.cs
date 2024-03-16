@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 namespace kc.runtime
@@ -26,6 +27,9 @@ namespace kc.runtime
 
         [SerializeField]
         private float _coyoteTime = 0.82f;
+
+        [SerializeField]
+        private UnityEvent _onJump = new UnityEvent();
 
         private Rigidbody2D _rigidbody;
         private PlayerInput _input;
@@ -67,6 +71,7 @@ namespace kc.runtime
         {
             if (CanJump())
             {
+                _onJump.Invoke();
                 _lastJumpTimer = 0;
                 _isJumping = true;
                 _jumpTimeCounter = _maxJumpTime;

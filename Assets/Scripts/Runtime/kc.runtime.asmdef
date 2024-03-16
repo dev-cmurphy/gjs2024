@@ -2,7 +2,10 @@
     "name": "kc.runtime",
     "rootNamespace": "kc.runtime",
     "references": [
-        "GUID:75469ad4d38634e559750d17036d5f7c"
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:20235487c1332a841bac2e980783ed83",
+        "GUID:9edbd4175029c68449fd2fb907cb63bd",
+        "GUID:3e6fe95c4c00b244ca6daecd940422d8"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
