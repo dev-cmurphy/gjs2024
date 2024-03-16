@@ -6,20 +6,13 @@ namespace kc.runtime.Assets.Scripts.Runtime.Enemy
     public class EnemyHealthSystem : MonoBehaviour
     {
         [SerializeField]
-        private GameObject _enemy;
-
-        [SerializeField]
         private int _maxHealth;
+
         private int _health;
 
         void Awake()
         {
             _health = _maxHealth;
-        }
-
-        void Update()
-        {
-
         }
 
         public void loseHealth(int damage)
@@ -29,8 +22,17 @@ namespace kc.runtime.Assets.Scripts.Runtime.Enemy
 
             if (_health <= 0)
             {
-                Destroy(_enemy);
+                TriggerDeath();
             }
+        }
+
+        private void TriggerDeath()
+        {
+            this.enabled = false;
+
+            InnocenceController.Kill();
+
+            Destroy(this.gameObject);
         }
     }
 }

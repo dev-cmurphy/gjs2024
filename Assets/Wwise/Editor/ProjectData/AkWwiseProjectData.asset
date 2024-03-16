@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1353b7d96ad2924ca0f0babc05269f00
     GuidInternal: 
-    m_lastTime: -8584909947353581354
+    m_lastTime: -8584909917052576380
     List:
     - name: Soundbanks
       guid: 73506eeeee3534449b079a2027ccdf61
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 66f3b30d3d575d4ea4bca7db8c3661c5
     GuidInternal: 
-    m_lastTime: -8584909947354421253
+    m_lastTime: -8584909917053236351
     List: []
   - PhysicalPath: Events\NPC.wwu
     PathAndIcons:
@@ -107,7 +107,7 @@ MonoBehaviour:
     ParentPath: Events\NPC
     guid: 5dffe5f85632df4e8100efa8a6426d41
     GuidInternal: 
-    m_lastTime: -8584909947354411359
+    m_lastTime: -8584909917053236351
     List:
     - name: Play_NPC_Hurt
       guid: db05b96d07d19f49995029419d1e7b60
@@ -137,7 +137,7 @@ MonoBehaviour:
     ParentPath: Events\ObjectsEvents
     guid: e9938a803103ea4897e32c4836f5b149
     GuidInternal: 
-    m_lastTime: -8584909947354411359
+    m_lastTime: -8584909917053226379
     List:
     - name: Play_Gun_Shot
       guid: e1bb6aa72a42de4f8a2e09a903403269
@@ -167,7 +167,7 @@ MonoBehaviour:
     ParentPath: Events\PlayerEvents
     guid: 733f1990d27634428628f83c132e1c98
     GuidInternal: 
-    m_lastTime: -8584909947354401362
+    m_lastTime: -8584909917053216369
     List:
     - name: Play_Player_Footsteps_Walk
       guid: cb366bf87c1fcf42b25219e6289cb629
@@ -389,7 +389,7 @@ MonoBehaviour:
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 
-  AutoSyncSelection: 0
+  AutoSyncSelection: 1
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 
