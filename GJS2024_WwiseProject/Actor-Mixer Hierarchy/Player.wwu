@@ -20,6 +20,11 @@
 						<RandomSequenceContainer Name="SQ_Player_Jump" ID="{EF406E93-2C88-428D-8516-A39B58CE8692}" ShortID="305614802">
 							<PropertyList>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">

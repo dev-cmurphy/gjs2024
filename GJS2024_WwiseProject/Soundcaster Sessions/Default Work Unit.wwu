@@ -14,12 +14,20 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Play_Music" ID="{72D1101A-0A5B-428D-8EE3-22FF9C0E2A71}" WorkUnitID="{BE3B8A77-C15D-4E4D-B09B-1688F1C40650}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Play_Gun_Shot" ID="{A76ABBE1-422A-4FDE-8A2E-09A903403269}" WorkUnitID="{808A93E9-0331-48EA-97E3-2C4836F5B149}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Stop_Player_Footsteps_Walk" ID="{2FC2EEE8-D820-4C54-98C1-E610611A4EFE}" WorkUnitID="{90193F73-76D2-4234-8628-F83C132E1C98}"/>
 							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_TouchGround" ID="{225F29C4-635F-41E4-804B-A4F79DE224EC}" WorkUnitID="{90193F73-76D2-4234-8628-F83C132E1C98}"/>
+							<Position X="1" Y="2"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Play_NPC_Hurt" ID="{6DB905DB-D107-499F-9950-29419D1E7B60}" WorkUnitID="{F8E5FF5D-3256-4EDF-8100-EFA8A6426D41}"/>
@@ -29,8 +37,8 @@
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Lvl3" ID="{4079F24E-416A-4F3A-8DA2-80944BD3BC8F}"/>
-						<CurrentSwitchRef Name="Dirt" ID="{468C341F-EC51-4325-9C63-5082D42E54E6}"/>
+						<CurrentSwitchRef Name="lvl5" ID="{90A64AB7-4112-4F5C-9D8E-BDC4EE70F760}"/>
+						<CurrentSwitchRef Name="Grass" ID="{28943A4D-623A-4D42-AF41-8EF18D7203D5}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
