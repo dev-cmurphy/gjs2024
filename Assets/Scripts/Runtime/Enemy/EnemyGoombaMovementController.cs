@@ -6,11 +6,8 @@ namespace kc.runtime
     /// S'occupe du mouvement d'un ennemi de base
     /// </summary>
     [RequireComponent(typeof(Rigidbody2D))]
-    public class BasicEnemyMovementController : MonoBehaviour
+    public class EnemyGoombaMovementController : MonoBehaviour
     {
-        [SerializeField]
-        private Transform _player;
-
         [SerializeField]
         private float _acceleration;
 

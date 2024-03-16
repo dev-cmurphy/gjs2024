@@ -77,6 +77,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6120418588454569547}
   - component: {fileID: 1681191959435434011}
+  - component: {fileID: 642335362337347062}
   m_Layer: 0
   m_Name: EnemyJumper
   m_TagString: Enemy
@@ -116,7 +117,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -128,6 +129,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &642335362337347062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7638481130319980992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 741658f78fd876a43b0d2c8c4f3e3967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  _acceleration: 3
+  _jumpForce: 6
+  _speed: 3
+  _direction: 0
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &9122336051696578156
 GameObject:
   m_ObjectHideFlags: 0

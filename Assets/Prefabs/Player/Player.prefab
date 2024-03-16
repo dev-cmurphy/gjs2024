@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _acceleration: 3
-  _jumpForce: 9
+  _jumpForce: 6
   _speed: 5
   _maxJumpTime: 0.65
 --- !u!50 &5527477921505855898

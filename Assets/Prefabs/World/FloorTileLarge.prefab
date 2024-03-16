@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1659421534427903872}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FloorTileLarge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7522138892291592222}
   - component: {fileID: 6205527179805847049}
   - component: {fileID: 4440074503395389135}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Static Sprite
   m_TagString: Ground
   m_Icon: {fileID: 0}
