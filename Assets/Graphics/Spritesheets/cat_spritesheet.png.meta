@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c02f44078d33ee5439382c5760fc832c
+guid: 17bbf22d6d203904984e3ef745ff4d50
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bird_spritesheet_0
+      name: cat_spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1bc99b8968c72746a4cbb6c711a3c04
-      internalID: 40755347
+      spriteID: 03ff5459c553e3946bcdd1b51e9b6a18
+      internalID: -1282162717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bird_spritesheet_1
+      name: cat_spritesheet_1
       rect:
         serializedVersion: 2
         x: 1000
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 052eb3c33c32f8245ad2cceb4c7f56f6
-      internalID: -459578194
+      spriteID: 3930298c9f75cf5448dc1fedfb4bd1fb
+      internalID: -561168331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bird_spritesheet_2
+      name: cat_spritesheet_2
       rect:
         serializedVersion: 2
         x: 0
@@ -192,29 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abfef3bce53dab24ab3fe27269229610
-      internalID: -2072041384
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bird_spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 1000
-        y: 0
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ca639be78485b047b5214ea672ce17a
-      internalID: 339524893
+      spriteID: fedebc211575c6646b70bb3e2c47146d
+      internalID: -2111087090
       vertices: []
       indices: 
       edges: []
@@ -230,10 +209,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bird_spritesheet_0: 40755347
-      bird_spritesheet_1: -459578194
-      bird_spritesheet_2: -2072041384
-      bird_spritesheet_3: 339524893
+      cat_spritesheet_0: -1282162717
+      cat_spritesheet_1: -561168331
+      cat_spritesheet_2: -2111087090
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

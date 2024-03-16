@@ -9,9 +9,6 @@ namespace kc.runtime
     public class EnemyFlyerMovementController : MonoBehaviour
     {
         [SerializeField]
-        private Transform _player;
-
-        [SerializeField]
         private float _acceleration;
 
         [SerializeField]
@@ -19,6 +16,9 @@ namespace kc.runtime
 
         [SerializeField]
         private float _sightDistance;
+
+        [SerializeField]
+        private Animator _animator;
 
         private Rigidbody2D _rigidbody;
 
@@ -29,23 +29,27 @@ namespace kc.runtime
 
         private void Update()
         {
+            Vector2 pos = PlayerMovementController.PlayerPosition();
             if (IsPlayerInSight())
             {
                 // Dive on player
-                _direction = new Vector2(_player.transform.position.x - transform.position.x, _player.transform.position.y - transform.position.y).normalized;
+                _direction = new Vector2(pos.x - transform.position.x, pos.y - transform.position.y).normalized;
             }
             else
             {
                 // Move horizontally
-                _direction = new Vector2(_player.transform.position.x - transform.position.x, 0).normalized;
+                _direction = new Vector2(pos.x - transform.position.x, 0).normalized;
             }
 
             _rigidbody.AddForce(_direction * _acceleration);
+
+            _animator.SetFloat("horizontal", _rigidbody.velocity.x);
         }
 
         private bool IsPlayerInSight()
         {
-            float distance = new Vector2(_player.transform.position.x - transform.position.x, _player.transform.position.y - transform.position.y).magnitude;
+            Vector2 pos = PlayerMovementController.PlayerPosition();
+            float distance = new Vector2(pos.x - transform.position.x, pos.y - transform.position.y).magnitude;
 
             return distance < _sightDistance;
         }

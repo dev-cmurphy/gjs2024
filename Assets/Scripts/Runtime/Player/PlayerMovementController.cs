@@ -204,6 +204,11 @@ namespace kc.runtime
             if (hit.collider != null)
             {
                 isCloseEnoughToGround = hit.collider.CompareTag("Ground") || hit.collider.CompareTag("Enemy");
+
+                if (_rigidbody.velocity.y < 0f)
+                {
+                    isCloseEnoughToGround = false;
+                }
             }
 
             return isCloseEnoughToGround || _currentGroundCollider != null || (_coyoteTimer < _coyoteTime && _lastJumpTimer > _coyoteTime);

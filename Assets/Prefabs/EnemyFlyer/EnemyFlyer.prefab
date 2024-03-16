@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 3328313426319546957}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4121953023802707197}
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 1, b: 0.16973758, a: 1}
+  m_Sprite: {fileID: -2072041384, guid: c02f44078d33ee5439382c5760fc832c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 5005938520360011114}
   - component: {fileID: 1760943816626779567}
   - component: {fileID: 6402992401418198512}
+  - component: {fileID: 4095558670356208887}
   m_Layer: 0
   m_Name: EnemyFlyer
   m_TagString: Enemy
@@ -160,10 +161,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57228fdfdb5562f4d9916c45a26791eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 0}
   _acceleration: 2
   _direction: {x: 0, y: 0}
   _sightDistance: 10
+  _animator: {fileID: 4095558670356208887}
 --- !u!114 &1760943816626779567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +193,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 5
+--- !u!95 &4095558670356208887
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4297928429062831546}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4376066b20de53049bbb19a812e7f65f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6480792338455359426
 GameObject:
   m_ObjectHideFlags: 0
