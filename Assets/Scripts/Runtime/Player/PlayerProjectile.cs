@@ -15,9 +15,9 @@ namespace kc.runtime
             _body = GetComponent<Rigidbody2D>();
             _body.isKinematic = true;
             _damage = damage;
-            
-            _body.velocity = velocity;
             _body.position = spawnPoint;
+
+            _body.velocity = velocity;
         }
     }
 }

@@ -32,15 +32,23 @@ namespace kc.runtime
             _input = GetComponent<PlayerInput>();
             _shootAction = _input.actions["Shoot"];
 
-            _shootAction.performed += Shoot;
         }
 
         private void Update()
         {
             _fireTimer += Time.deltaTime;
+
         }
 
-        private void Shoot(InputAction.CallbackContext context)
+        private void FixedUpdate()
+        {
+            if (_shootAction.IsPressed())
+            {
+                TryShoot(new InputAction.CallbackContext()); // You may not need any specific info from CallbackContext here
+            }
+        }
+
+        private void TryShoot(InputAction.CallbackContext context)
         {
             if (!CanShoot())
                 return;
