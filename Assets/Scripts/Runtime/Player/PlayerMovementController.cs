@@ -88,8 +88,6 @@ namespace kc.runtime
 
             _lastJumpTimer += Time.deltaTime;
 
-            Debug.Log($"CoyoteTimer {_coyoteTimer} | {_lastJumpTimer} ");
-
             // Movement
             _lastInput = _moveAction.ReadValue<Vector2>();
             _rigidbody.velocity = new Vector2(_lastInput.x * _speed, _rigidbody.velocity.y);

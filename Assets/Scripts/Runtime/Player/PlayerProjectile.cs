@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Unity.VisualScripting.YamlDotNet.Serialization;
 using UnityEngine;
 
 namespace kc.runtime
@@ -18,6 +19,15 @@ namespace kc.runtime
             _body.position = spawnPoint;
 
             _body.velocity = velocity;
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.TryGetComponent<BasicEnemyMovementController>(out var comp))
+            {
+                // damage enemy
+                Debug.Log("Will damage enemy from this place in code.");
+            }
         }
     }
 }
