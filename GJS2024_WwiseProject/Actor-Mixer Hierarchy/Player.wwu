@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4DC3D2E2-C950-4D45-A4B9-C9E5FE4EBE16}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="Player" ID="{4DC3D2E2-C950-4D45-A4B9-C9E5FE4EBE16}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="MixerPlayer" ID="{D066FE9A-0373-48DB-8583-8654EA1743CF}" ShortID="684085241">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="SQ_Player_FT_Grass" ID="{77EECAEF-F605-415D-9C07-63F66B539BA8}" ShortID="643816409">
+							<PropertyList>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+								</Reference>
+							</ReferenceList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
