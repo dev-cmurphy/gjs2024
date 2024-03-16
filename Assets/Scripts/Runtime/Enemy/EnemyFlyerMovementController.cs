@@ -15,14 +15,12 @@ namespace kc.runtime
         private float _acceleration;
 
         [SerializeField]
-        private float _speed;
-
-        [SerializeField]
         private Vector2 _direction;
 
-        private Rigidbody2D _rigidbody;
+        [SerializeField]
+        private float _sightDistance;
 
-        private Collider2D _currentCollider;
+        private Rigidbody2D _rigidbody;
 
         private void Awake()
         {
@@ -39,47 +37,17 @@ namespace kc.runtime
             else
             {
                 // Move horizontally
-                _direction = new Vector2(-1, 0);
+                _direction = new Vector2(_player.transform.position.x - transform.position.x, 0).normalized;
             }
 
-            _rigidbody.velocity = _direction * _speed;
-        }
-
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            if (collision.collider.CompareTag("Ground")) // Make sure your ground has the tag "Ground"
-            {
-                foreach (ContactPoint2D point in collision.contacts)
-                {
-                    // Check if the contact is approximately below us
-                    if (point.normal.y > 0.75f && collision.collider.CompareTag("Ground"))
-                    {
-                        _currentCollider = collision.collider;
-                        break;
-                    }
-                }
-            }
-        }
-
-        private void OnCollisionExit2D(Collision2D collision)
-        {
-            if (collision.collider == _currentCollider)
-            {
-                _currentCollider = null;
-            }
-        }
-
-        private void OnDrawGizmos()
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawRay(transform.position, _direction * 2f);
+            _rigidbody.AddForce(_direction * _acceleration);
         }
 
         private bool IsPlayerInSight()
         {
             float distance = new Vector2(_player.transform.position.x - transform.position.x, _player.transform.position.y - transform.position.y).magnitude;
 
-            return distance < 10f;
+            return distance < _sightDistance;
         }
     }
 }
