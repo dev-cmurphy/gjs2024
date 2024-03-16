@@ -29,7 +29,8 @@
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Gravel" ID="{820AB4BB-5A22-43DC-B0A3-2D685B18AF0E}"/>
+						<CurrentSwitchRef Name="Lvl3" ID="{4079F24E-416A-4F3A-8DA2-80944BD3BC8F}"/>
+						<CurrentSwitchRef Name="Dirt" ID="{468C341F-EC51-4325-9C63-5082D42E54E6}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

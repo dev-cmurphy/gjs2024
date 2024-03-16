@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6AE83FCF-C1F4-43F9-9575-72F620042D3E}" SchemaVersion="119">
+	<Switches>
+		<WorkUnit Name="Music Switch" ID="{6AE83FCF-C1F4-43F9-9575-72F620042D3E}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Music_Switch_Lvl" ID="{64E59BDF-500F-4375-B5F4-2A011965CB37}">
+					<ChildrenList>
+						<Switch Name="Lvl1" ID="{8FD9439B-E914-4CBC-A314-E6CE84A033B1}"/>
+						<Switch Name="Lvl2" ID="{E0139CC6-9DE9-4CAE-A439-7E9D3D0B45B9}"/>
+						<Switch Name="Lvl3" ID="{4079F24E-416A-4F3A-8DA2-80944BD3BC8F}"/>
+						<Switch Name="lvl4" ID="{5D61F330-47B9-45CA-8591-75E3EFCE0F9E}"/>
+						<Switch Name="lvl5" ID="{90A64AB7-4112-4F5C-9D8E-BDC4EE70F760}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>
