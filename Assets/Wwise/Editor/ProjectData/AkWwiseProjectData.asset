@@ -66,11 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1353b7d96ad2924ca0f0babc05269f00
     GuidInternal: 
-<<<<<<< Updated upstream
-    m_lastTime: -8584909841883374211
-=======
-    m_lastTime: -8584909916664901002
->>>>>>> Stashed changes
+    m_lastTime: -8584909833768965442
     List:
     - name: Soundbanks
       guid: 73506eeeee3534449b079a2027ccdf61
@@ -111,7 +107,7 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: 778a3bbe5dc14d4eb09b1688f1c40650
     GuidInternal: 
-    m_lastTime: -8584909841908878766
+    m_lastTime: -8584909833792033247
     List:
     - name: Play_Music
       guid: 1a10d1725b0a8d428ee322ff9c0e2a71
@@ -158,8 +154,8 @@ MonoBehaviour:
         guid: db05b96d07d19f49995029419d1e7b60
       Path: Events\NPC\Play_NPC_Hurt
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.7682292
+      minDuration: 0.43197918
   - PhysicalPath: Events\ObjectsEvents.wwu
     PathAndIcons:
     - ElementName: Events
@@ -188,8 +184,8 @@ MonoBehaviour:
         guid: e1bb6aa72a42de4f8a2e09a903403269
       Path: Events\ObjectsEvents\Play_Gun_Shot
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.9792552
+      minDuration: 1.2415032
   - PhysicalPath: Events\PlayerEvents.wwu
     PathAndIcons:
     - ElementName: Events
@@ -235,8 +231,8 @@ MonoBehaviour:
         guid: 192f8c54745b9f438c7ec93bb28338b9
       Path: Events\PlayerEvents\Play_Player_Jump
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.73722917
+      minDuration: 0.22154167
     - name: Play_TouchGround
       guid: c4295f225f63e441804ba4f79de224ec
       id: 1443523550
@@ -252,8 +248,8 @@ MonoBehaviour:
         guid: c4295f225f63e441804ba4f79de224ec
       Path: Events\PlayerEvents\Play_TouchGround
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.7333459
+      minDuration: 0.31911668
     - name: Stop_Player_Footsteps_Walk
       guid: e8eec22f20d8544c98c1e610611a4efe
       id: 2404544781
@@ -269,8 +265,8 @@ MonoBehaviour:
         guid: e8eec22f20d8544c98c1e610611a4efe
       Path: Events\PlayerEvents\Stop_Player_Footsteps_Walk
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -311,11 +307,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 5d0f614aba99464bb15c54108539506f
     GuidInternal: 
-<<<<<<< Updated upstream
-    m_lastTime: -8584909841883324217
-=======
-    m_lastTime: -8584910019209221171
->>>>>>> Stashed changes
+    m_lastTime: -8584909833768949178
     List: []
   - PhysicalPath: Switches\Music Switch.wwu
     PathAndIcons:
@@ -328,7 +320,7 @@ MonoBehaviour:
     ParentPath: Switches\Music Switch
     guid: cf3fe86af4c1f943957572f620042d3e
     GuidInternal: 
-    m_lastTime: -8584909841883274184
+    m_lastTime: -8584909833768949178
     List:
     - name: Music_Switch_Lvl
       guid: df9be5640f507543b5f42a011965cb37
@@ -439,11 +431,7 @@ MonoBehaviour:
     ParentPath: Switches\Player
     guid: 1a0fc76d207a524e9c982c6480a2a07c
     GuidInternal: 
-<<<<<<< Updated upstream
-    m_lastTime: -8584909841883224215
-=======
-    m_lastTime: -8584910019209221171
->>>>>>> Stashed changes
+    m_lastTime: -8584909833768939287
     List:
     - name: SW_Player_Footsteps_Ground_Materials
       guid: 81f4f4c17061c34aadfa72c04d41d856
@@ -526,12 +514,8 @@ MonoBehaviour:
     m_lastTime: -8584910582068718165
     List: []
   ExpandedFileSystemItemIds: 
-<<<<<<< Updated upstream
-  ExpandedWaapiItemIds: 050000000700000017000000190000001a0000001b000000
-=======
   ExpandedWaapiItemIds: 
->>>>>>> Stashed changes
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 
