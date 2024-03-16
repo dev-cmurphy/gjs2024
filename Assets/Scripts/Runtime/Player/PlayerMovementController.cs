@@ -100,7 +100,6 @@ namespace kc.runtime
             // Jump Time Extension
             if (_isJumping && _jumpTimeCounter > 0)
             {
-                Debug.Log("Still jumping...");
                 _rigidbody.AddForce(new Vector2(0f, _jumpForce) * _jumpTimeCounter, ForceMode2D.Force);
                 _jumpTimeCounter -= Time.deltaTime;
             }
