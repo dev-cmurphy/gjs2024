@@ -95,7 +95,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2013324315508192782}
   m_Father: {fileID: 2569808348615396694}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -303,7 +304,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _maxVel: 13
+  _maxVel: 16
   _onTouchGround:
     m_PersistentCalls:
       m_Calls:
@@ -409,6 +410,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _movement: {fileID: 129440549372388526}
+  _gunObject: {fileID: 0}
+  _gunParent: {fileID: 2013324315508192782}
 --- !u!95 &2776265937892524137
 Animator:
   serializedVersion: 5
@@ -445,6 +448,37 @@ MonoBehaviour:
   _animator: {fileID: 2776265937892524137}
   _body: {fileID: 5527477921505855898}
   _movement: {fileID: 129440549372388526}
+--- !u!1 &6305717971743926489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2013324315508192782}
+  m_Layer: 7
+  m_Name: GunParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2013324315508192782
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6305717971743926489}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.49300003, y: -0.12800002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5750516945084870546}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8859556169925543690
 GameObject:
   m_ObjectHideFlags: 0

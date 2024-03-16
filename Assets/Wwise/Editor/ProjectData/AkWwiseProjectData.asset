@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1353b7d96ad2924ca0f0babc05269f00
     GuidInternal: 
-    m_lastTime: -8584909917052576380
+    m_lastTime: -8584909841883374211
     List:
     - name: Soundbanks
       guid: 73506eeeee3534449b079a2027ccdf61
@@ -96,6 +96,36 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584909917053236351
     List: []
+  - PhysicalPath: Events\Music.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Music
+      ObjectType: 12
+      guid: 778a3bbe5dc14d4eb09b1688f1c40650
+    ParentPath: Events\Music
+    guid: 778a3bbe5dc14d4eb09b1688f1c40650
+    GuidInternal: 
+    m_lastTime: -8584909841908878766
+    List:
+    - name: Play_Music
+      guid: 1a10d1725b0a8d428ee322ff9c0e2a71
+      id: 2932040671
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: 778a3bbe5dc14d4eb09b1688f1c40650
+      - ElementName: Play_Music
+        ObjectType: 3
+        guid: 1a10d1725b0a8d428ee322ff9c0e2a71
+      Path: Events\Music\Play_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\NPC.wwu
     PathAndIcons:
     - ElementName: Events
@@ -277,23 +307,131 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 5d0f614aba99464bb15c54108539506f
     GuidInternal: 
-    m_lastTime: -8584910021753838351
+    m_lastTime: -8584909841883324217
     List: []
+  - PhysicalPath: Switches\Music Switch.wwu
+    PathAndIcons:
+    - ElementName: Switches
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Music Switch
+      ObjectType: 12
+      guid: cf3fe86af4c1f943957572f620042d3e
+    ParentPath: Switches\Music Switch
+    guid: cf3fe86af4c1f943957572f620042d3e
+    GuidInternal: 
+    m_lastTime: -8584909841883274184
+    List:
+    - name: Music_Switch_Lvl
+      guid: df9be5640f507543b5f42a011965cb37
+      id: 469175266
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music Switch
+        ObjectType: 12
+        guid: cf3fe86af4c1f943957572f620042d3e
+      - ElementName: Music_Switch_Lvl
+        ObjectType: 11
+        guid: df9be5640f507543b5f42a011965cb37
+      Path: Switches\Music Switch\Music_Switch_Lvl
+      values:
+      - name: Lvl1
+        guid: 9b43d98f14e9bc4ca314e6ce84a033b1
+        id: 141331490
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music Switch
+          ObjectType: 12
+          guid: cf3fe86af4c1f943957572f620042d3e
+        - ElementName: Music_Switch_Lvl
+          ObjectType: 11
+          guid: df9be5640f507543b5f42a011965cb37
+        - ElementName: Lvl1
+          ObjectType: 10
+          guid: 9b43d98f14e9bc4ca314e6ce84a033b1
+      - name: Lvl2
+        guid: c69c13e0e99dae4ca4397e9d3d0b45b9
+        id: 141331489
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music Switch
+          ObjectType: 12
+          guid: cf3fe86af4c1f943957572f620042d3e
+        - ElementName: Music_Switch_Lvl
+          ObjectType: 11
+          guid: df9be5640f507543b5f42a011965cb37
+        - ElementName: Lvl2
+          ObjectType: 10
+          guid: c69c13e0e99dae4ca4397e9d3d0b45b9
+      - name: Lvl3
+        guid: 4ef279406a413a4f8da280944bd3bc8f
+        id: 141331488
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music Switch
+          ObjectType: 12
+          guid: cf3fe86af4c1f943957572f620042d3e
+        - ElementName: Music_Switch_Lvl
+          ObjectType: 11
+          guid: df9be5640f507543b5f42a011965cb37
+        - ElementName: Lvl3
+          ObjectType: 10
+          guid: 4ef279406a413a4f8da280944bd3bc8f
+      - name: lvl4
+        guid: 30f3615db947ca45859175e3efce0f9e
+        id: 141331495
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music Switch
+          ObjectType: 12
+          guid: cf3fe86af4c1f943957572f620042d3e
+        - ElementName: Music_Switch_Lvl
+          ObjectType: 11
+          guid: df9be5640f507543b5f42a011965cb37
+        - ElementName: lvl4
+          ObjectType: 10
+          guid: 30f3615db947ca45859175e3efce0f9e
+      - name: lvl5
+        guid: b74aa69012415c4f9d8ebdc4ee70f760
+        id: 141331494
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music Switch
+          ObjectType: 12
+          guid: cf3fe86af4c1f943957572f620042d3e
+        - ElementName: Music_Switch_Lvl
+          ObjectType: 11
+          guid: df9be5640f507543b5f42a011965cb37
+        - ElementName: lvl5
+          ObjectType: 10
+          guid: b74aa69012415c4f9d8ebdc4ee70f760
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   - PhysicalPath: Switches\Player.wwu
     PathAndIcons:
     - ElementName: Switches
       ObjectType: 5
       guid: 00000000000000000000000000000000
-    - ElementName: Default Work Unit
-      ObjectType: 12
-      guid: 5d0f614aba99464bb15c54108539506f
     - ElementName: Player
       ObjectType: 12
       guid: 1a0fc76d207a524e9c982c6480a2a07c
-    ParentPath: Switches\Default Work Unit\Player
+    ParentPath: Switches\Player
     guid: 1a0fc76d207a524e9c982c6480a2a07c
     GuidInternal: 
-    m_lastTime: -8584910021753828363
+    m_lastTime: -8584909841883224215
     List:
     - name: SW_Player_Footsteps_Ground_Materials
       guid: 81f4f4c17061c34aadfa72c04d41d856
@@ -302,16 +440,13 @@ MonoBehaviour:
       - ElementName: Switches
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 5d0f614aba99464bb15c54108539506f
       - ElementName: Player
         ObjectType: 12
         guid: 1a0fc76d207a524e9c982c6480a2a07c
       - ElementName: SW_Player_Footsteps_Ground_Materials
         ObjectType: 11
         guid: 81f4f4c17061c34aadfa72c04d41d856
-      Path: Switches\Default Work Unit\Player\SW_Player_Footsteps_Ground_Materials
+      Path: Switches\Player\SW_Player_Footsteps_Ground_Materials
       values:
       - name: Dirt
         guid: 1f348c4651ec25439c635082d42e54e6
@@ -320,9 +455,6 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 5d0f614aba99464bb15c54108539506f
         - ElementName: Player
           ObjectType: 12
           guid: 1a0fc76d207a524e9c982c6480a2a07c
@@ -339,9 +471,6 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 5d0f614aba99464bb15c54108539506f
         - ElementName: Player
           ObjectType: 12
           guid: 1a0fc76d207a524e9c982c6480a2a07c
@@ -358,9 +487,6 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 5d0f614aba99464bb15c54108539506f
         - ElementName: Player
           ObjectType: 12
           guid: 1a0fc76d207a524e9c982c6480a2a07c

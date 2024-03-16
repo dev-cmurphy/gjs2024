@@ -29,18 +29,25 @@ namespace kc.runtime
         [SerializeField]
         private PlayerMovementController _movement;
 
+        [SerializeField]
+        private GameObject _gunObject;
+
+        [SerializeField]
+        private Transform _gunParent;
 
         private PlayerInput _input;
         private InputAction _shootAction;
 
         private int _shotDirection = 1;
 
+        private bool _hasGun;
+
         private float _fireTimer = 0;
 
         // Use this for initialization
         void Awake()
         {
-
+            _hasGun = false;
             _input = GetComponent<PlayerInput>();
             _shootAction = _input.actions["Shoot"];
 
@@ -81,8 +88,23 @@ namespace kc.runtime
             projectile.Initialize(transform.position + (_shotDirection * transform.right), (_shotDirection * transform.right) * _projectileSpeed , _damage, _bulletLifetime);
         }
 
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.transform.parent.gameObject == _gunObject)
+            {
+                _gunObject.transform.SetParent(_gunParent);
+                _gunObject.transform.localPosition = Vector2.zero;
+                _hasGun = true;
+            }
+        }
+
         private bool CanShoot()
         {
+            if (!_hasGun )
+            {
+                return false;
+            }
+
             return _fireTimer > 1f / _firingRate;
         }
     }
