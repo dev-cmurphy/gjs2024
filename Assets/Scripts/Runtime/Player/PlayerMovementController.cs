@@ -1,4 +1,5 @@
 ﻿using kc.runtime.Assets.Scripts.Runtime.Enemy;
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -236,6 +237,11 @@ namespace kc.runtime
         public bool IsLeft()
         {
             return _isLeft;
+        }
+
+        internal static GameObject GetGameObject()
+        {
+            return _instance.gameObject;
         }
     }
 }

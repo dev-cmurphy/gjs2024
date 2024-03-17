@@ -9,9 +9,6 @@ namespace kc.runtime
     public class EnemyJumperMovementController : MonoBehaviour
     {
         [SerializeField]
-        private Transform _player;
-
-        [SerializeField]
         private float _acceleration;
 
         [SerializeField]
@@ -39,11 +36,12 @@ namespace kc.runtime
 
         private void Update()
         {
+            Vector2 pos = PlayerMovementController.PlayerPosition();
             // Movement direction
-            _direction = Mathf.Sign(_player.transform.position.x - transform.position.x);
+            _direction = Mathf.Sign(pos.x - transform.position.x);
 
             // Check for y-axis movement
-            bool isPlayerAbove = Physics2D.Raycast(transform.position, Vector2.up, 3f, 1 << _player.gameObject.layer);
+            bool isPlayerAbove = Physics2D.Raycast(transform.position, Vector2.up, 3f, 1 << PlayerMovementController.GetGameObject().layer);
 
             if (CanJump())
             {
@@ -68,11 +66,12 @@ namespace kc.runtime
 
         private void FixedUpdate()
         {
+            Vector3 pos = PlayerMovementController.PlayerPosition();
             if (CanJump() && shouldJump)
             {
                 shouldJump = false;
 
-                Vector2 jumpDirection = (_player.position - transform.position).normalized * _jumpForce;
+                Vector2 jumpDirection = (pos - transform.position).normalized * _jumpForce;
 
                 _rigidbody.AddForce(new Vector2(jumpDirection.x, _jumpForce), ForceMode2D.Impulse);
             }
