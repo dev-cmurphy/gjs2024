@@ -60,12 +60,15 @@ namespace kc.runtime
 
         private Vector2 _startPos;
 
+        private Vector2 _lastCheckpoint;
+
         private static PlayerMovementController _instance;
 
         private void Awake()
         {
             _instance = this;
             _startPos = transform.position;
+            _lastCheckpoint = _startPos;
             _rigidbody = GetComponent<Rigidbody2D>();
 
             _input = GetComponent<PlayerInput>();
@@ -81,7 +84,7 @@ namespace kc.runtime
 
         private void ResetPlayer(InputAction.CallbackContext obj)
         {
-            _rigidbody.position = _startPos;
+            _rigidbody.position = _lastCheckpoint;
             _rigidbody.velocity = Vector2.zero;
         }
 
@@ -193,10 +196,6 @@ namespace kc.runtime
                     }
                 }
             }
-            else if (collision.collider.CompareTag("Checkpoint"))
-            {
-                //collision.collider.transform.position;
-            }
         }
 
         private void OnCollisionExit2D(Collision2D collision)
@@ -205,6 +204,21 @@ namespace kc.runtime
             {
                 _currentGroundCollider = null;
                 _coyoteTimer = 0;
+            }
+        }
+
+        private void OnTriggerEnter2D(Collider2D collider)
+        {
+            if (collider.CompareTag("Checkpoint"))
+            {
+                // Change checkpoint position
+                _lastCheckpoint = collider.transform.position;
+            }
+            else if (collider.CompareTag("FallDetection"))
+            {
+                // Reset player position to last checkpoint
+                _rigidbody.position = _lastCheckpoint;
+                _rigidbody.velocity = Vector2.zero;
             }
         }
 

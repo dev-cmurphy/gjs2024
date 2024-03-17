@@ -59,6 +59,22 @@ namespace kc.runtime
             }
         }
 
+        private void OnTriggerEnter2D(Collider2D collider)
+        {
+            if (collider.CompareTag("Checkpoint"))
+            {
+                // Refill health
+                _currentHealth = _maxHealth;
+            }
+            else if (collider.CompareTag("FallDetection"))
+            {
+                // Refill health
+                _currentHealth = _maxHealth;
+
+                // Lose a life...
+            }
+        }
+
         private void Update()
         {
             if (_isInvincible)
