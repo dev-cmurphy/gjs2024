@@ -41,10 +41,10 @@
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Lvl2" ID="{E0139CC6-9DE9-4CAE-A439-7E9D3D0B45B9}"/>
+						<CurrentSwitchRef Name="Lvl1" ID="{8FD9439B-E914-4CBC-A314-E6CE84A033B1}"/>
 						<CurrentSwitchRef Name="Dirt" ID="{468C341F-EC51-4325-9C63-5082D42E54E6}"/>
-						<CurrentSwitchRef Name="End1" ID="{0604D1C8-7568-48A9-BF5A-98F6D3F5BAD9}"/>
-						<CurrentSwitchRef Name="Lvl" ID="{F6745B12-3F77-4D8B-9A21-8648FA3AF7AE}"/>
+						<CurrentSwitchRef Name="Fight2" ID="{25D8D004-6135-420B-9A88-57FA994C564E}"/>
+						<CurrentSwitchRef Name="Finale" ID="{21667573-E335-4974-8C86-37695AEC1184}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
