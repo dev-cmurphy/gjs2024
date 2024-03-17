@@ -1046,9 +1046,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 47540665}
-  _heightThreshold: 4
+  _heightThreshold1: 6
+  _heightThreshold2: 12
+  _heightThreshold3: 18
+  _heightThreshold4: 24
+  _heightThreshold5: 30
+  _heightThreshold6: 48
   _followSpeed: 1
-  _timeAboveThreshold: 2.5
+  _timeAboveThreshold: 1.5
 --- !u!4 &602715780
 Transform:
   m_ObjectHideFlags: 0
@@ -2763,11 +2768,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2569808348615396694, guid: eef96dc7d32f2f1468827044c4cafddc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1083
+      value: 746.9
       objectReference: {fileID: 0}
     - target: {fileID: 2569808348615396694, guid: eef96dc7d32f2f1468827044c4cafddc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2
+      value: 19.6
       objectReference: {fileID: 0}
     - target: {fileID: 2569808348615396694, guid: eef96dc7d32f2f1468827044c4cafddc, type: 3}
       propertyPath: m_LocalPosition.z
