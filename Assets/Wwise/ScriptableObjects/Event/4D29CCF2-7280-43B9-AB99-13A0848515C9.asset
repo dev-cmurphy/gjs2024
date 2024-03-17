@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c261535d2870734391424279dd1312d, type: 3}
-  m_Name: 5C47AD8C-09A3-4A2C-8762-031545B3B0DC
+  m_Name: 4D29CCF2-7280-43B9-AB99-13A0848515C9
   m_EditorClassIdentifier: 
-  objectName: Stop_SW_Music
-  id: 3118878238
-  guid: 5C47AD8C-09A3-4A2C-8762-031545B3B0DC
+  objectName: Stop_All_Music
+  id: 2595883869
+  guid: 4D29CCF2-7280-43B9-AB99-13A0848515C9

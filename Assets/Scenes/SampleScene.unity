@@ -705,6 +705,7 @@ GameObject:
   - component: {fileID: 379193886}
   - component: {fileID: 379193885}
   - component: {fileID: 379193888}
+  - component: {fileID: 379193889}
   m_Layer: 0
   m_Name: WwiseMusic
   m_TagString: Untagged
@@ -732,7 +733,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: de913688e22dfcc4c98363def2273ed0, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: f59cee76bba830f4b9744b912f5dc4c9, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -808,7 +809,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: be5cd498b18f65a4e8e36c4551d1fbe8, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: fc64a9b352bb96848886710f7897fc9d, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -822,6 +823,30 @@ MonoBehaviour:
   attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
   LargeModePositions: []
   multiPositionArray: []
+--- !u!114 &379193889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379193884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746c05fe6b70bdb42ad2b43cb1337b54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bd67130858704b24182afa0c7a24fd4f, type: 2}
+  valueIdInternal: 0
+  groupIdInternal: 0
+  valueGuidInternal: 
+  groupGuidInternal: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
