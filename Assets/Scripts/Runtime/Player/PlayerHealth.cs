@@ -98,7 +98,7 @@ namespace kc.runtime
 
         }
 
-        private void Damage(int dmg)
+        public void Damage(int dmg)
         {
             if (_isInvincible)
             {
