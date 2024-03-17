@@ -43,20 +43,15 @@
 						</Action>
 						<Action Name="" ID="{1A3DB53F-BA52-40D0-8D2C-464B006F8DDD}" ShortID="975007295">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="Delay" Type="Real64" Value="2"/>
 								<Property Name="FadeOutCurve" Type="int16" Value="1"/>
 							</PropertyList>
-							<ReferenceList/>
-							<ChildrenList>
-								<EventActionException Name="" ID="{39EB2EBF-1AEA-4EFA-99BD-0510CDAA8B2B}">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Stingers" ID="{20BFD9CB-418D-4279-A1E3-94127A6CFCBE}" WorkUnitID="{419E520B-F7E7-450C-B169-F9843264A7A0}"/>
-										</Reference>
-									</ReferenceList>
-								</EventActionException>
-							</ChildrenList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SW_LvltoFinal" ID="{2610B7EE-7C9C-4B00-BA7C-969AEE099F9F}" WorkUnitID="{771E73EF-2B14-40A1-805E-71343BBAA320}"/>
+								</Reference>
+							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
