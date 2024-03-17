@@ -285,8 +285,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _acceleration: 3
-  _jumpForce: 9
-  _speed: 5
+  _jumpForce: 11
+  _speed: 6
   _maxJumpTime: 0.65
   _stompDamage: 2
   _coyoteTime: 0.15
@@ -337,7 +337,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 3.5
+  m_GravityScale: 3
   m_Material: {fileID: 6200000, guid: b7a2a2614fab57344923050f24027b6a, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
