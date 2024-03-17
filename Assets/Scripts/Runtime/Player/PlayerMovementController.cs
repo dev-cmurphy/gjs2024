@@ -96,6 +96,17 @@ namespace kc.runtime
 
         private void OnDisable()
         {
+            RemoveCallbacks();
+        }
+
+        private void OnDestroy()
+        {
+            RemoveCallbacks();
+        }
+
+        private void RemoveCallbacks()
+        {
+
             _jumpAction.started -= _ => StartJump();
             _jumpAction.canceled -= _ => EndJump();
         }
