@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Enemy
   - Bullet
+  - Checkpoint
+  - FallDetection
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - UI
   - Ground
   - Player
-  - 
+  - Checkpoint
   - 
   - 
   - 
