@@ -1,5 +1,4 @@
-﻿using kc.runtime.Assets.Scripts.Runtime.Enemy;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 namespace kc.runtime.Assets.Scripts.Runtime.Enemy
@@ -11,6 +10,18 @@ namespace kc.runtime.Assets.Scripts.Runtime.Enemy
 
         [SerializeField]
         private GameObject _boss;
+
+        [SerializeField]
+        private SpriteRenderer _bossSprite;
+
+        [SerializeField]
+        private Sprite _spriteOursGentil;
+
+        [SerializeField]
+        private Sprite _spriteOursMedium;
+
+        [SerializeField]
+        private Sprite _spriteOursFache;
 
         [SerializeField]
         private int _timeUntilSecondPhase;
@@ -73,31 +84,58 @@ namespace kc.runtime.Assets.Scripts.Runtime.Enemy
             // Set Camera
             yield return new WaitForSeconds(1f);
 
-            // Change music
-
-            // Boss appears
-            _boss.SetActive(true);
-
-            while (_timer < _timeEnd)
+            // Innocent run
+            if (InnocenceController.GetGuilt() == 0)
             {
+                // Change music
+
+                // Boss appears
+                _bossSprite.sprite = _spriteOursGentil;
+                _boss.SetActive(true);
+
+                // Spawn confettis
+
+                yield return new WaitForSeconds(10f);
+            }
+            // Guilty run
+            else
+            {
+                // Change music
+
+                // Boss appears
+                if (InnocenceController.GetGuilt() > 100)
+                {
+                    _bossSprite.sprite = _spriteOursFache;
+                }
+                else
+                {
+                    _bossSprite.sprite = _spriteOursMedium;
+                }
+                _boss.SetActive(true);
+
+                // Pause
                 yield return new WaitForSeconds(3.5f);
 
-                TryShoot();
-
-                if (_timer > _timeUntilSecondPhase && (_jumperTimer > 20f))
+                while (_timer < _timeEnd)
                 {
-                    // Spawn some jumpers
+                    TryShoot();
+                    yield return new WaitForSeconds(3.5f);
 
-                    _jumperTimer = 0;
+                    if (InnocenceController.GetGuilt() > 40 && _timer > _timeUntilSecondPhase && (_jumperTimer > 20f))
+                    {
+                        // Spawn some jumpers
+
+                        _jumperTimer = 0;
+                    }
+
+                    if (InnocenceController.GetGuilt() > 100 && _timer > _timeUntilThirdPhase && (_flyerTimer > 20f))
+                    {
+                        // Spawn some flyers
+
+                        _flyerTimer = 0;
+                    }
                 }
-
-                if (_timer > _timeUntilThirdPhase && (_flyerTimer > 20f))
-                {
-                    // Spawn some flyers
-
-                    _flyerTimer = 0;
-                }
-            }
+            }            
         }
 
         private void TryShoot()
