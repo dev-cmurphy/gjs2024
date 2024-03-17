@@ -28,6 +28,7 @@ namespace kc.runtime
         public UnityEvent OnDeath = new UnityEvent();
         [HideInInspector]
         public UnityEvent<float> OnDamage = new UnityEvent<float>();
+        public UnityEvent<float> OnHeal = new UnityEvent<float>();
 
         private void Awake()
         {
@@ -67,11 +68,13 @@ namespace kc.runtime
             {
                 // Refill health
                 _currentHealth = _maxHealth;
+                OnHeal.Invoke(_currentHealth);
             }
             else if (collider.CompareTag("FallDetection"))
             {
                 // Refill health
                 _currentHealth = _maxHealth;
+                OnHeal.Invoke(_currentHealth);
 
                 // Lose a life...
             }
@@ -94,8 +97,6 @@ namespace kc.runtime
 
                 _playerSprite.color = c;
             }
-
-
         }
 
         private void Damage(int dmg)

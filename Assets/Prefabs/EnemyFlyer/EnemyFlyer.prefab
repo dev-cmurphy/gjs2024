@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 6402992401418198512}
   - component: {fileID: 4095558670356208887}
   - component: {fileID: 7130908167233090886}
+  - component: {fileID: 4856957328951080939}
   m_Layer: 0
   m_Name: EnemyFlyer
   m_TagString: Enemy
@@ -194,6 +195,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685fc3b031294104786516b627841cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _deathSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6d039acf567a50a4b8084cf6403c3c1b, type: 2}
   _maxHealth: 5
 --- !u!95 &4095558670356208887
 Animator:
@@ -229,6 +234,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 1
+--- !u!114 &4856957328951080939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4297928429062831546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 892c7f35e543ff541a8fffe490554597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &6480792338455359426
 GameObject:
   m_ObjectHideFlags: 0

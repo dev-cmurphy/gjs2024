@@ -6,6 +6,9 @@ namespace kc.runtime.Assets.Scripts.Runtime.Enemy
     public class EnemyHealthSystem : MonoBehaviour
     {
         [SerializeField]
+        private AK.Wwise.Event _deathSound;
+
+        [SerializeField]
         private int _maxHealth;
 
         private Animator _animator;
@@ -23,6 +26,7 @@ namespace kc.runtime.Assets.Scripts.Runtime.Enemy
             _health -= damage;
             Debug.Log("Enemy Health: " + _health);
 
+            _deathSound.Post(gameObject);
             if (_health <= 0)
             {
                 TriggerDeath(stomp);
@@ -34,6 +38,7 @@ namespace kc.runtime.Assets.Scripts.Runtime.Enemy
             this.enabled = false;
 
             InnocenceController.Kill();
+
 
             if (stomp)
             {

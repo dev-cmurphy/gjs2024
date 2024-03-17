@@ -45,6 +45,11 @@ namespace kc.runtime
             }
         }
 
+        private void OnDestroy()
+        {
+            _stopWalkEvent.Post(gameObject);
+        }
+
         public void Jump()
         {
             _jumpEvent.Post(gameObject);

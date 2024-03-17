@@ -106,7 +106,6 @@ namespace kc.runtime
 
         private void RemoveCallbacks()
         {
-
             _jumpAction.started -= _ => StartJump();
             _jumpAction.canceled -= _ => EndJump();
         }

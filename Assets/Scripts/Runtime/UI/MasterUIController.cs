@@ -21,6 +21,7 @@ namespace kc.runtime
         {
             _slider.maxValue = _health.CurrentHealth();
             _health.OnDamage.AddListener((val) => {_slider.value = val; });
+            _health.OnHeal.AddListener((val) => { _slider.value = val; });
         }
 
         // Update is called once per frame
