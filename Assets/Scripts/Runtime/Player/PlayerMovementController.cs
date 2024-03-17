@@ -4,6 +4,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.PlayerLoop;
 
 namespace kc.runtime
 {
@@ -130,16 +131,9 @@ namespace kc.runtime
 
         private void Update()
         {
-            if (_currentGroundCollider == null)
-            {
-                _coyoteTimer += Time.deltaTime;
-            }
-
-            _lastJumpTimer += Time.deltaTime;
 
             // Movement
             _lastInput = _moveAction.ReadValue<Vector2>();
-            _rigidbody.velocity = new Vector2(_lastInput.x * _speed, _rigidbody.velocity.y);
 
             if (_lastInput.x < 0f)
             {
@@ -150,12 +144,24 @@ namespace kc.runtime
             {
                 _isLeft = false;
             }
+        }
+
+        private void FixedUpdate()
+        {
+            if (_currentGroundCollider == null)
+            {
+                _coyoteTimer += Time.fixedDeltaTime;
+            }
+
+            _lastJumpTimer += Time.fixedDeltaTime;
+
+            _rigidbody.velocity = new Vector2(_lastInput.x * _speed, _rigidbody.velocity.y);
 
             // Jump Time Extension
             if (_isJumping && _jumpTimeCounter > 0)
             {
                 _rigidbody.AddForce(new Vector2(0f, _jumpForce) * _jumpTimeCounter, ForceMode2D.Force);
-                _jumpTimeCounter -= Time.deltaTime;
+                _jumpTimeCounter -= Time.fixedDeltaTime;
             }
 
             _rigidbody.velocity = Vector2.ClampMagnitude(_rigidbody.velocity, _maxVel);
