@@ -16136,9 +16136,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 47540665}
-  _heightThreshold: 4
+  _heightThreshold1: 6
+  _heightThreshold2: 12
+  _heightThreshold3: 18
+  _heightThreshold4: 24
+  _heightThreshold5: 30
+  _heightThreshold6: 48
   _followSpeed: 1
-  _timeAboveThreshold: 2.5
+  _timeAboveThreshold: 1.5
 --- !u!4 &602715780
 Transform:
   m_ObjectHideFlags: 0

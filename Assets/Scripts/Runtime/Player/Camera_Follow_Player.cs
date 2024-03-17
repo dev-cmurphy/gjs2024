@@ -9,10 +9,25 @@ namespace kc.runtime
         public Transform player;
 
         [SerializeField]
-        private float _heightThreshold;
+        private float _heightThreshold1;
 
         [SerializeField]
-        private float _followSpeed = 5f; // Adjust this to control the lerp speed
+        private float _heightThreshold2;
+
+        [SerializeField]
+        private float _heightThreshold3;
+
+        [SerializeField]
+        private float _heightThreshold4;
+
+        [SerializeField]
+        private float _heightThreshold5;
+
+        [SerializeField]
+        private float _heightThreshold6;
+
+        [SerializeField]
+        private float _followSpeed = 1.5f; // Adjust this to control the lerp speed
 
         private float _baseY; // The initial y position of the camera
 
@@ -35,7 +50,7 @@ namespace kc.runtime
 
             float targetY = _baseY;
 
-            if (Mathf.Abs(deltaY) > _heightThreshold)
+            if (Mathf.Abs(deltaY) > _heightThreshold6)
             {
                 // Increment the timer since the player is above the threshold
                 _timeSpentAboveThreshold += Time.deltaTime;
@@ -43,12 +58,74 @@ namespace kc.runtime
                 // Check if the player has been above the threshold for long enough
                 if (_timeSpentAboveThreshold >= _timeAboveThreshold)
                 {
-                    // Check if the player has moved beyond the height threshold from the base y-position
-                    if (Mathf.Abs(deltaY) > _heightThreshold)
-                    {
-                        // Calculate new target Y position with respect to the threshold
-                        targetY = _baseY + Mathf.Sign(deltaY) * _heightThreshold;
-                    }
+                    // Calculate new target Y position with respect to the threshold
+                    targetY = _baseY + Mathf.Sign(deltaY) * _heightThreshold6;
+                    Debug.Log("Target: " + targetY);
+                }
+            }
+            else if (Mathf.Abs(deltaY) > _heightThreshold5)
+            {
+                // Increment the timer since the player is above the threshold
+                _timeSpentAboveThreshold += Time.deltaTime;
+
+                // Check if the player has been above the threshold for long enough
+                if (_timeSpentAboveThreshold >= _timeAboveThreshold)
+                {
+                    // Calculate new target Y position with respect to the threshold
+                    targetY = _baseY + Mathf.Sign(deltaY) * _heightThreshold5;
+                    Debug.Log("Target: " + targetY);
+                }
+            }
+            else if (Mathf.Abs(deltaY) > _heightThreshold4)
+            {
+                // Increment the timer since the player is above the threshold
+                _timeSpentAboveThreshold += Time.deltaTime;
+
+                // Check if the player has been above the threshold for long enough
+                if (_timeSpentAboveThreshold >= _timeAboveThreshold)
+                {
+                    // Calculate new target Y position with respect to the threshold
+                    targetY = _baseY + Mathf.Sign(deltaY) * _heightThreshold4;
+                    Debug.Log("Target: " + targetY);
+                }
+            }
+            else if (Mathf.Abs(deltaY) > _heightThreshold3)
+            {
+                // Increment the timer since the player is above the threshold
+                _timeSpentAboveThreshold += Time.deltaTime;
+
+                // Check if the player has been above the threshold for long enough
+                if (_timeSpentAboveThreshold >= _timeAboveThreshold)
+                {
+                    // Calculate new target Y position with respect to the threshold
+                    targetY = _baseY + Mathf.Sign(deltaY) * _heightThreshold3;
+                    Debug.Log("Target: " + targetY);
+                }
+            }
+            else if (Mathf.Abs(deltaY) > _heightThreshold2)
+            {
+                // Increment the timer since the player is above the threshold
+                _timeSpentAboveThreshold += Time.deltaTime;
+
+                // Check if the player has been above the threshold for long enough
+                if (_timeSpentAboveThreshold >= _timeAboveThreshold)
+                {
+                    // Calculate new target Y position with respect to the threshold
+                    targetY = _baseY + Mathf.Sign(deltaY) * _heightThreshold2;
+                    Debug.Log("Target: " + targetY);
+                }
+            }
+            else if (Mathf.Abs(deltaY) > _heightThreshold1)
+            {
+                // Increment the timer since the player is above the threshold
+                _timeSpentAboveThreshold += Time.deltaTime;
+
+                // Check if the player has been above the threshold for long enough
+                if (_timeSpentAboveThreshold >= _timeAboveThreshold)
+                {
+                    // Calculate new target Y position with respect to the threshold
+                    targetY = _baseY + Mathf.Sign(deltaY) * _heightThreshold1;
+                    Debug.Log("Target: " + targetY);
                 }
             }
             else

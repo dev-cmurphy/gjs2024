@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1353b7d96ad2924ca0f0babc05269f00
     GuidInternal: 
-    m_lastTime: -8584909093418329309
+    m_lastTime: -8584909081351132484
     List:
     - name: Soundbanks
       guid: 73506eeeee3534449b079a2027ccdf61
@@ -107,7 +107,7 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: 778a3bbe5dc14d4eb09b1688f1c40650
     GuidInternal: 
-    m_lastTime: -8584909093418699038
+    m_lastTime: -8584909081387858419
     List:
     - name: Play_All_Music
       guid: c300ddba707924449e2b06139955d2ce
@@ -171,7 +171,7 @@ MonoBehaviour:
     ParentPath: Events\NPC
     guid: 5dffe5f85632df4e8100efa8a6426d41
     GuidInternal: 
-    m_lastTime: -8584909116118939570
+    m_lastTime: -8584909081387848423
     List:
     - name: Play_Bird_Hurt
       guid: 1a5555b551d2ed4c90f974f4a8a93fb6
@@ -388,7 +388,7 @@ MonoBehaviour:
     ParentPath: Switches\Music Switch
     guid: cf3fe86af4c1f943957572f620042d3e
     GuidInternal: 
-    m_lastTime: -8584909116087951670
+    m_lastTime: -8584909081351112468
     List:
     - name: Music_Switch_Fights
       guid: 0137f3f666d6204cbc29c2ffc4cd177d
