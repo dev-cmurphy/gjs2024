@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6574729193388997138}
   - component: {fileID: 2083477587477001540}
   - component: {fileID: 6746983079575655272}
+  - component: {fileID: 3913248594565748489}
   m_Layer: 0
   m_Name: EnemyGoomba
   m_TagString: Enemy
@@ -36,7 +37,7 @@ Transform:
   - {fileID: 7848916082458208812}
   - {fileID: 5851480878197701208}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &292879387633523462
 Rigidbody2D:
@@ -130,6 +131,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3913248594565748489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5422160252317165126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f609f8bd5ffc9444da33b073edda260c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 1
 --- !u!1 &5525985314163602299
 GameObject:
   m_ObjectHideFlags: 0
