@@ -18,6 +18,9 @@ namespace kc.runtime
         private int _guiltPerKill;
 
         [SerializeField]
+        private Animator _lightsAnimator;
+
+        [SerializeField]
         private List<AkSwitch> _switches;
 
         [SerializeField]
@@ -28,14 +31,10 @@ namespace kc.runtime
              _instance = this;
         }
 
-        public static void CommitAct(int gravity)
-        {
-            _instance._guilt += gravity;
-        }
-
         public static void Kill()
         {
             _instance._guilt += _instance._guiltPerKill;
+            _instance._lightsAnimator.SetInteger("guilt", _instance._guilt);
         }
 
         public static int GetGuilt()

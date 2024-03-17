@@ -88,7 +88,6 @@ namespace kc.runtime
             {
                 return;
             }
-            Debug.Log("Player ouch");
 
             _invincibilityTimer = 0;
             _isInvincible = true;
