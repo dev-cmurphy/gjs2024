@@ -415,6 +415,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _killCount: {fileID: 1618798828}
+  _health: {fileID: 0}
+  _slider: {fileID: 0}
 --- !u!1 &202714968
 GameObject:
   m_ObjectHideFlags: 0
@@ -2652,7 +2654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2265437236223698511, guid: eef96dc7d32f2f1468827044c4cafddc, type: 3}
       propertyPath: _onDamage.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2265437236223698511, guid: eef96dc7d32f2f1468827044c4cafddc, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Mode

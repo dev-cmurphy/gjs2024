@@ -26,6 +26,8 @@ namespace kc.runtime
         private UnityEvent<float> _onDamage;
 
         public UnityEvent OnDeath = new UnityEvent();
+        [HideInInspector]
+        public UnityEvent<float> OnDamage = new UnityEvent<float>();
 
         private void Awake()
         {
@@ -94,6 +96,7 @@ namespace kc.runtime
 
             _currentHealth -= dmg;
             _onDamage.Invoke(_currentHealth);
+            OnDamage.Invoke(_currentHealth);
 
             if (_currentHealth <= 0)
             {
