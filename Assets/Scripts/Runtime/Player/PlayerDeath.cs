@@ -1,22 +1,19 @@
 ﻿
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace kc.runtime
 {
     public class PlayerDeath : MonoBehaviour
     {
+        [SerializeField]
+        private Animator _cameraAnimator;
 
         // Use this for initialization
         void Start()
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            _cameraAnimator.SetTrigger("zoom");
         }
 
         public void Reload()
@@ -26,7 +23,11 @@ namespace kc.runtime
 
         private IEnumerator ReloadCoroutine()
         {
+            // reload current scene ?
             yield return null;
+
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
