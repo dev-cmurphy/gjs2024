@@ -673,15 +673,7 @@
 								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
-						<RandomSequenceContainer Name="SQ_NPC_Hurt_Wet" ID="{B4E8E246-986C-4E1F-A9D5-E336B1A5FE24}" ShortID="734374106">
-							<PropertyList>
-								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-9</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
+						<ActorMixer Name="Mixer_Rabbit" ID="{F93E7F48-88CD-497C-8D14-CDE764BD277E}" ShortID="319162630">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
@@ -691,9 +683,487 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<RandomSequenceContainer Name="RDM_NPC_Hurt_Wet" ID="{290EFB4F-71B5-47CA-A004-A5108A6EA1BF}" ShortID="715435935">
+								<Folder Name="Rabbit_Hurt" ID="{96E88FA2-E0CF-4343-8FBF-1E68E8E53136}" ShortID="938892711">
+									<ChildrenList>
+										<RandomSequenceContainer Name="SQ_Rabbit_Hurt_Dry" ID="{46DCED5C-55BC-485B-9742-FF7D987A3912}" ShortID="127631946">
+											<PropertyList>
+												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="RDM_Rabbit_Hurt_Dry" ID="{4463DC42-803E-4382-A31F-DD2DD8F1A9F7}" ShortID="991763901">
+													<PropertyList>
+														<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="SFX_Rabbit_Hurt_Dry_01" ID="{074C2DA3-F1D3-4A38-A29A-225BB3A86EEC}" ShortID="482637969">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{197C3EE5-D5A5-4BE1-B306-C60BCCA17786}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.733651040289502"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_NPC_Hurt_Dry_01to08.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="455530426"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{197C3EE5-D5A5-4BE1-B306-C60BCCA17786}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SFX_Rabbit_Hurt_Dry_02" ID="{F3ACC2A5-1C15-43E7-BECE-0EF927000809}" ShortID="995114935">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{33238862-A7FD-47D9-8BFA-A9409D3B25DA}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.919098282573859"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="1.66804678740837"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_NPC_Hurt_Dry_01to08.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="895969117"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{33238862-A7FD-47D9-8BFA-A9409D3B25DA}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SFX_Rabbit_Hurt_Dry_03" ID="{53B47229-BFB5-4CF9-A420-F9761B29C105}" ShortID="546183722">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{211BF673-CA22-451D-B7F7-8B007E517035}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="1.78003066664138"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="2.25903593140636"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_NPC_Hurt_Dry_01to08.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="169770706"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{211BF673-CA22-451D-B7F7-8B007E517035}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SFX_Rabbit_Hurt_Dry_04" ID="{45819610-0FCB-4B3C-8885-CFE4E9F21BC1}" ShortID="696057594">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{3D05BA63-8C73-4065-AC69-42C3DC0A73F5}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="2.64979365286126"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="3.30156517353659"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_NPC_Hurt_Dry_01to08.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="13485794"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{3D05BA63-8C73-4065-AC69-42C3DC0A73F5}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SFX_Rabbit_Hurt_Dry_05" ID="{CA3F82B8-DB96-4D76-B93D-880D5CFD2237}" ShortID="869049224">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{1B23C06A-9006-46D2-B151-E2FF0465FD0D}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="3.45917570971449"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="4.01487465499412"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_NPC_Hurt_Dry_01to08.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="501436184"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{1B23C06A-9006-46D2-B151-E2FF0465FD0D}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SFX_Rabbit_Hurt_Dry_06" ID="{752C5EAA-6BB7-4FFF-B9DB-B5AFFC942106}" ShortID="788806335">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{A3A4C65A-19CC-45A2-AD31-2AC8BB6EA068}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="4.28993830343788"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="4.60419657264476"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_NPC_Hurt_Dry_01to08.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="432179721"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{A3A4C65A-19CC-45A2-AD31-2AC8BB6EA068}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Playlist">
+													<Reference>
+														<ObjectRef Name="RDM_Rabbit_Hurt_Dry" ID="{4463DC42-803E-4382-A31F-DD2DD8F1A9F7}" WorkUnitID="{DA2CEEB3-E224-412F-AE49-231F385863BC}"/>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="SQ_Rabbit_Hurt_Wet" ID="{B4E8E246-986C-4E1F-A9D5-E336B1A5FE24}" ShortID="734374106">
+											<PropertyList>
+												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-9</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="RDM_Rabbit_Hurt_Wet" ID="{290EFB4F-71B5-47CA-A004-A5108A6EA1BF}" ShortID="715435935">
+													<PropertyList>
+														<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="SFX_Rabbit_Hurt_Wet_01" ID="{4EC9D45A-5ECB-4E64-B632-EDB10AD6DF32}" ShortID="97823143">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SFX_NPC_Hurt_Wet_01" ID="{33779A5C-875D-4E50-BF84-42706031E3F4}">
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_NPC_Hurt_Wet_01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="214093863"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SFX_NPC_Hurt_Wet_01" ID="{33779A5C-875D-4E50-BF84-42706031E3F4}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SFX_Rabbit_Hurt_Wet_02" ID="{CBE9B257-E4A5-44F3-A894-17528EF6C2B5}" ShortID="65725379">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SFX_NPC_Hurt_Wet_02" ID="{CF5D177A-9F5D-48A9-A547-E3E9C698AB49}">
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_NPC_Hurt_Wet_02.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="177718072"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SFX_NPC_Hurt_Wet_02" ID="{CF5D177A-9F5D-48A9-A547-E3E9C698AB49}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SFX_Rabbit_Hurt_Wet_03" ID="{D6284B83-A527-4AD1-94F3-35F2AE4B46B4}" ShortID="660592308">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SFX_NPC_Hurt_Wet_03" ID="{482EF45F-FB7B-4298-8CA0-C6AF2E30E0D7}">
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_NPC_Hurt_Wet_03.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1069504320"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SFX_NPC_Hurt_Wet_03" ID="{482EF45F-FB7B-4298-8CA0-C6AF2E30E0D7}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SFX_Rabbit_Hurt_Wet_04" ID="{127BB4C5-9091-4295-8B5D-0B6853E1672E}" ShortID="135077654">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SFX_NPC_Hurt_Wet_04" ID="{DC03B640-7EB6-4E28-AA55-C51418C825B5}">
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_NPC_Hurt_Wet_04.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="187752416"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SFX_NPC_Hurt_Wet_04" ID="{DC03B640-7EB6-4E28-AA55-C51418C825B5}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SFX_Rabbit_Hurt_Wet_05" ID="{53B58452-0CCF-4C17-B6BA-53FA76D82CBB}" ShortID="520439241">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SFX_NPC_Hurt_Wet_05" ID="{9FBE72E8-F7EA-451B-97D0-2C49E37412C5}">
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_NPC_Hurt_Wet_05.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="855810363"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SFX_NPC_Hurt_Wet_05" ID="{9FBE72E8-F7EA-451B-97D0-2C49E37412C5}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SFX_Rabbit_Hurt_Wet_06" ID="{6728574B-4BD5-4E7B-B425-D0AC009439E7}" ShortID="303425454">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SFX_NPC_Hurt_Wet_06" ID="{CB9CDA1B-CB25-45A5-B98B-E0C8CFD1782F}">
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_NPC_Hurt_Wet_06.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="290841203"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SFX_NPC_Hurt_Wet_06" ID="{CB9CDA1B-CB25-45A5-B98B-E0C8CFD1782F}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SFX_Rabbit_Hurt_Wet_07" ID="{A0D60F05-124D-43A4-9438-44096F62F9EC}" ShortID="257178982">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SFX_NPC_Hurt_Wet_07" ID="{16C05442-61FB-42FA-963B-C71380163DCD}">
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_NPC_Hurt_Wet_07.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="244246338"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SFX_NPC_Hurt_Wet_07" ID="{16C05442-61FB-42FA-963B-C71380163DCD}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SFX_Rabbit_Hurt_Wet_08" ID="{AAD05014-DCBA-4772-A223-627A0EF540C8}" ShortID="1023854407">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SFX_NPC_Hurt_Wet_08" ID="{864BB338-CBAC-401E-801D-824839F22DDB}">
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_NPC_Hurt_Wet_08.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="411881285"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SFX_NPC_Hurt_Wet_08" ID="{864BB338-CBAC-401E-801D-824839F22DDB}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Playlist">
+													<Reference>
+														<ObjectRef Name="RDM_Rabbit_Hurt_Wet" ID="{290EFB4F-71B5-47CA-A004-A5108A6EA1BF}" WorkUnitID="{DA2CEEB3-E224-412F-AE49-231F385863BC}"/>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
+									</ChildrenList>
+								</Folder>
+							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="Mixer_Bird" ID="{757123FB-1344-47B7-BE79-75A2A7170F18}" ShortID="400972679">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Folder Name="Bird_Attack" ID="{D70643B1-EF40-4F51-B675-E393FE4606F3}" ShortID="1072080893">
+									<ChildrenList>
+										<RandomSequenceContainer Name="SQ_Bird_Attack" ID="{95E937A3-1F7E-4799-99BB-DBD64FF6EE52}" ShortID="458627009">
+											<PropertyList>
+												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-10</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="RDM_Bird_Attack" ID="{581BD000-32E4-4FA9-B020-39D6AF3EE8C2}" ShortID="35709532">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Playlist">
+													<Reference>
+														<ObjectRef Name="RDM_Bird_Attack" ID="{581BD000-32E4-4FA9-B020-39D6AF3EE8C2}" WorkUnitID="{DA2CEEB3-E224-412F-AE49-231F385863BC}"/>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
+									</ChildrenList>
+								</Folder>
+								<RandomSequenceContainer Name="SQ_NPC_Bird_Hurt" ID="{EC270308-34D7-4411-ACDB-8B6539D214E5}" ShortID="762113756">
 									<PropertyList>
-										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -704,7 +1174,24 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="SFX_NPC_Hurt_Wet_01" ID="{4EC9D45A-5ECB-4E64-B632-EDB10AD6DF32}" ShortID="97823143">
+										<RandomSequenceContainer Name="RDM_NPC_Bird_Hurt" ID="{F585F682-F5D1-432E-A361-C55423B76F39}" ShortID="23059">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{A087578F-7F70-4EE8-B97C-42BF3F893947}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{FE2153A8-0ECC-40F8-8E6C-8B5B6C0F5785}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="5"/>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
@@ -714,192 +1201,379 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="SFX_NPC_Hurt_Wet_01" ID="{33779A5C-875D-4E50-BF84-42706031E3F4}">
-													<Language>SFX</Language>
-													<AudioFile>SFX_NPC_Hurt_Wet_01.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="214093863"/>
-													</MediaIDList>
-												</AudioFileSource>
+												<Sound Name="SFX_NPC_Bird_Hurt_01" ID="{9FEB2017-6802-46EE-9169-714652C61D34}" ShortID="807483291">
+													<PropertyList>
+														<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+														<Property Name="Soundly:FileID" Type="string" Value="SND77551"/>
+														<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1710682805HZexYzgrBBe3UZISkIW&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND77551/sfy_tpoBRHNptrfRGehyJXdTJHNkRFPVov"/>
+														<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+														<Property Name="Soundly:HandleStopTime" Type="string" Value="14.2484375"/>
+														<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+														<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+														<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+														<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+														<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+														<Property Name="Soundly:RenderedFilePath" Type="string" Value="C:\Users\is44c\Soundly Audio\Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1.wav"/>
+														<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="48000"/>
+														<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.06944444444444445"/>
+														<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.06944444444444445"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1" ID="{8378B408-9950-4658-9E9F-0E46232BBEA7}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="0.108766857506361"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND77551"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0776906125045438"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.61594390676118"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Soundly Audio\Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="811042094"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1" ID="{8378B408-9950-4658-9E9F-0E46232BBEA7}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_NPC_Bird_Hurt_02" ID="{A85C2E49-BA73-4585-868C-D6651C354439}" ShortID="910112167">
+													<PropertyList>
+														<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+														<Property Name="Soundly:FileID" Type="string" Value="SND77551"/>
+														<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1710682805HZexYzgrBBe3UZISkIW&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND77551/sfy_tpoBRHNptrfRGehyJXdTJHNkRFPVov"/>
+														<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+														<Property Name="Soundly:HandleStopTime" Type="string" Value="14.2484375"/>
+														<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+														<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+														<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+														<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+														<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+														<Property Name="Soundly:RenderedFilePath" Type="string" Value="C:\Users\is44c\Soundly Audio\Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1.wav"/>
+														<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="48000"/>
+														<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.06944444444444445"/>
+														<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.06944444444444445"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1" ID="{C29D3DFA-91E9-4672-902B-CDEAEA029C15}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND77551"/>
+																<Property Name="TrimBegin" Type="Real64" Value="1.78688408760451"/>
+																<Property Name="TrimEnd" Type="Real64" Value="2.57930750181752"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Soundly Audio\Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="949071860"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1" ID="{C29D3DFA-91E9-4672-902B-CDEAEA029C15}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_NPC_Bird_Hurt_03" ID="{EAACF2D0-75CC-4ADF-B99A-AEA115E30B46}" ShortID="26564201">
+													<PropertyList>
+														<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+														<Property Name="Soundly:FileID" Type="string" Value="SND77551"/>
+														<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1710682805HZexYzgrBBe3UZISkIW&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND77551/sfy_tpoBRHNptrfRGehyJXdTJHNkRFPVov"/>
+														<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+														<Property Name="Soundly:HandleStopTime" Type="string" Value="14.2484375"/>
+														<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+														<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+														<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+														<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+														<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+														<Property Name="Soundly:RenderedFilePath" Type="string" Value="C:\Users\is44c\Soundly Audio\Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1.wav"/>
+														<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="48000"/>
+														<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.06944444444444445"/>
+														<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.06944444444444445"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1" ID="{5C8C5133-8C80-460C-BCE5-B136E011412D}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.233071837513632"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND77551"/>
+																<Property Name="TrimBegin" Type="Real64" Value="3.04547201017812"/>
+																<Property Name="TrimEnd" Type="Real64" Value="3.76020481188658"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Soundly Audio\Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="777284080"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1" ID="{5C8C5133-8C80-460C-BCE5-B136E011412D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_NPC_Bird_Hurt_04" ID="{00AC8D68-7637-4DF2-8E3F-45C835D94194}" ShortID="771832521">
+													<PropertyList>
+														<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+														<Property Name="Soundly:FileID" Type="string" Value="SND77551"/>
+														<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1710682805HZexYzgrBBe3UZISkIW&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND77551/sfy_tpoBRHNptrfRGehyJXdTJHNkRFPVov"/>
+														<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+														<Property Name="Soundly:HandleStopTime" Type="string" Value="14.2484375"/>
+														<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+														<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+														<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+														<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+														<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+														<Property Name="Soundly:RenderedFilePath" Type="string" Value="C:\Users\is44c\Soundly Audio\Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1.wav"/>
+														<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="48000"/>
+														<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.06944444444444445"/>
+														<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.06944444444444445"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1" ID="{07AD04C7-4998-405F-98EC-36155BA1E194}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0776906125045445"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND77551"/>
+																<Property Name="TrimBegin" Type="Real64" Value="4.75466548527807"/>
+																<Property Name="TrimEnd" Type="Real64" Value="5.36063142948019"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Soundly Audio\Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="397963032"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1" ID="{07AD04C7-4998-405F-98EC-36155BA1E194}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_NPC_Bird_Hurt_05" ID="{9A4E1A99-DE01-45F4-BD26-5BF399564889}" ShortID="1066427787">
+													<PropertyList>
+														<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+														<Property Name="Soundly:FileID" Type="string" Value="SND77551"/>
+														<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1710682805HZexYzgrBBe3UZISkIW&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND77551/sfy_tpoBRHNptrfRGehyJXdTJHNkRFPVov"/>
+														<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+														<Property Name="Soundly:HandleStopTime" Type="string" Value="14.2484375"/>
+														<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+														<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+														<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+														<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+														<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+														<Property Name="Soundly:RenderedFilePath" Type="string" Value="C:\Users\is44c\Soundly Audio\Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1.wav"/>
+														<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="48000"/>
+														<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.06944444444444445"/>
+														<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.06944444444444445"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1" ID="{EFA8F8C7-1831-4243-915D-209E46B2E218}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.170919347509996"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND77551"/>
+																<Property Name="TrimBegin" Type="Real64" Value="5.78018157033804"/>
+																<Property Name="TrimEnd" Type="Real64" Value="6.40168563704107"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Soundly Audio\Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="970070440"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1" ID="{EFA8F8C7-1831-4243-915D-209E46B2E218}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_NPC_Bird_Hurt_06" ID="{61B96D4D-914C-4621-93D9-16E6B701E3D3}" ShortID="885935996">
+													<PropertyList>
+														<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+														<Property Name="Soundly:FileID" Type="string" Value="SND77551"/>
+														<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1710682805HZexYzgrBBe3UZISkIW&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND77551/sfy_tpoBRHNptrfRGehyJXdTJHNkRFPVov"/>
+														<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+														<Property Name="Soundly:HandleStopTime" Type="string" Value="14.2484375"/>
+														<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+														<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+														<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+														<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+														<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+														<Property Name="Soundly:RenderedFilePath" Type="string" Value="C:\Users\is44c\Soundly Audio\Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1.wav"/>
+														<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="48000"/>
+														<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.06944444444444445"/>
+														<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.06944444444444445"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1" ID="{7D347449-67CB-4216-BA03-0BC38397A656}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0776906125045445"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND77551"/>
+																<Property Name="TrimBegin" Type="Real64" Value="5.76464344783714"/>
+																<Property Name="TrimEnd" Type="Real64" Value="6.35507126953835"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Soundly Audio\Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="567011246"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1" ID="{7D347449-67CB-4216-BA03-0BC38397A656}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_NPC_Bird_Hurt_07" ID="{5BF42BE9-E4FD-47E1-BB5A-BBF1867D5332}" ShortID="462318714">
+													<PropertyList>
+														<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+														<Property Name="Soundly:FileID" Type="string" Value="SND77551"/>
+														<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1710682805HZexYzgrBBe3UZISkIW&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND77551/sfy_tpoBRHNptrfRGehyJXdTJHNkRFPVov"/>
+														<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+														<Property Name="Soundly:HandleStopTime" Type="string" Value="14.2484375"/>
+														<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+														<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+														<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+														<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+														<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+														<Property Name="Soundly:RenderedFilePath" Type="string" Value="C:\Users\is44c\Soundly Audio\Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1.wav"/>
+														<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="48000"/>
+														<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.06944444444444445"/>
+														<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.06944444444444445"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1" ID="{1C116D69-EB06-4832-AC7F-CA1FF09DD565}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0776906125045445"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND77551"/>
+																<Property Name="TrimBegin" Type="Real64" Value="7.41168443293346"/>
+																<Property Name="TrimEnd" Type="Real64" Value="7.92442164213013"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Soundly Audio\Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="655720215"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1" ID="{1C116D69-EB06-4832-AC7F-CA1FF09DD565}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_NPC_Bird_Hurt_08" ID="{EBBC635F-E990-4102-B151-AD8A795F00D7}" ShortID="991755528">
+													<PropertyList>
+														<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+														<Property Name="Soundly:FileID" Type="string" Value="SND77551"/>
+														<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1710682805HZexYzgrBBe3UZISkIW&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND77551/sfy_tpoBRHNptrfRGehyJXdTJHNkRFPVov"/>
+														<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+														<Property Name="Soundly:HandleStopTime" Type="string" Value="14.2484375"/>
+														<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+														<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+														<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+														<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+														<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+														<Property Name="Soundly:RenderedFilePath" Type="string" Value="C:\Users\is44c\Soundly Audio\Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1.wav"/>
+														<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="48000"/>
+														<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.06944444444444445"/>
+														<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.06944444444444445"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1" ID="{AD3C2A0D-8294-45AB-8CEB-48147DD916CE}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0776906125045445"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND77551"/>
+																<Property Name="TrimBegin" Type="Real64" Value="10.7523807706288"/>
+																<Property Name="TrimEnd" Type="Real64" Value="11.2961942248273"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Soundly Audio\Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="406696800"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Birds, Songbird, Eurasian Magpie, Pica Pica, Bird SND77551 1" ID="{AD3C2A0D-8294-45AB-8CEB-48147DD916CE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_NPC_Hurt_Wet_01" ID="{33779A5C-875D-4E50-BF84-42706031E3F4}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="SFX_NPC_Hurt_Wet_02" ID="{CBE9B257-E4A5-44F3-A894-17528EF6C2B5}" ShortID="65725379">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_NPC_Hurt_Wet_02" ID="{CF5D177A-9F5D-48A9-A547-E3E9C698AB49}">
-													<Language>SFX</Language>
-													<AudioFile>SFX_NPC_Hurt_Wet_02.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="177718072"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_NPC_Hurt_Wet_02" ID="{CF5D177A-9F5D-48A9-A547-E3E9C698AB49}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="SFX_NPC_Hurt_Wet_03" ID="{D6284B83-A527-4AD1-94F3-35F2AE4B46B4}" ShortID="660592308">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_NPC_Hurt_Wet_03" ID="{482EF45F-FB7B-4298-8CA0-C6AF2E30E0D7}">
-													<Language>SFX</Language>
-													<AudioFile>SFX_NPC_Hurt_Wet_03.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="1069504320"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_NPC_Hurt_Wet_03" ID="{482EF45F-FB7B-4298-8CA0-C6AF2E30E0D7}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="SFX_NPC_Hurt_Wet_04" ID="{127BB4C5-9091-4295-8B5D-0B6853E1672E}" ShortID="135077654">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_NPC_Hurt_Wet_04" ID="{DC03B640-7EB6-4E28-AA55-C51418C825B5}">
-													<Language>SFX</Language>
-													<AudioFile>SFX_NPC_Hurt_Wet_04.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="187752416"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_NPC_Hurt_Wet_04" ID="{DC03B640-7EB6-4E28-AA55-C51418C825B5}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="SFX_NPC_Hurt_Wet_05" ID="{53B58452-0CCF-4C17-B6BA-53FA76D82CBB}" ShortID="520439241">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_NPC_Hurt_Wet_05" ID="{9FBE72E8-F7EA-451B-97D0-2C49E37412C5}">
-													<Language>SFX</Language>
-													<AudioFile>SFX_NPC_Hurt_Wet_05.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="855810363"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_NPC_Hurt_Wet_05" ID="{9FBE72E8-F7EA-451B-97D0-2C49E37412C5}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="SFX_NPC_Hurt_Wet_06" ID="{6728574B-4BD5-4E7B-B425-D0AC009439E7}" ShortID="303425454">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_NPC_Hurt_Wet_06" ID="{CB9CDA1B-CB25-45A5-B98B-E0C8CFD1782F}">
-													<Language>SFX</Language>
-													<AudioFile>SFX_NPC_Hurt_Wet_06.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="290841203"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_NPC_Hurt_Wet_06" ID="{CB9CDA1B-CB25-45A5-B98B-E0C8CFD1782F}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="SFX_NPC_Hurt_Wet_07" ID="{A0D60F05-124D-43A4-9438-44096F62F9EC}" ShortID="257178982">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_NPC_Hurt_Wet_07" ID="{16C05442-61FB-42FA-963B-C71380163DCD}">
-													<Language>SFX</Language>
-													<AudioFile>SFX_NPC_Hurt_Wet_07.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="244246338"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_NPC_Hurt_Wet_07" ID="{16C05442-61FB-42FA-963B-C71380163DCD}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="SFX_NPC_Hurt_Wet_08" ID="{AAD05014-DCBA-4772-A223-627A0EF540C8}" ShortID="1023854407">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_NPC_Hurt_Wet_08" ID="{864BB338-CBAC-401E-801D-824839F22DDB}">
-													<Language>SFX</Language>
-													<AudioFile>SFX_NPC_Hurt_Wet_08.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="411881285"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_NPC_Hurt_Wet_08" ID="{864BB338-CBAC-401E-801D-824839F22DDB}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
+										</RandomSequenceContainer>
 									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="RDM_NPC_Bird_Hurt" ID="{F585F682-F5D1-432E-A361-C55423B76F39}" WorkUnitID="{DA2CEEB3-E224-412F-AE49-231F385863BC}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 								</RandomSequenceContainer>
 							</ChildrenList>
-							<ObjectLists>
-								<ObjectList Name="Playlist">
-									<Reference>
-										<ObjectRef Name="RDM_NPC_Hurt_Wet" ID="{290EFB4F-71B5-47CA-A004-A5108A6EA1BF}" WorkUnitID="{DA2CEEB3-E224-412F-AE49-231F385863BC}"/>
-									</Reference>
-								</ObjectList>
-							</ObjectLists>
-						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="SQ_NPC_Hurt_Dry" ID="{46DCED5C-55BC-485B-9742-FF7D987A3912}" ShortID="127631946">
-							<PropertyList>
-								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-3</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
+						</ActorMixer>
+						<ActorMixer Name="Mixer_Cat" ID="{0B8F6FE8-8A6C-4DB3-BF2F-F6FF16824340}" ShortID="703926817">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
@@ -909,9 +1583,9 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<RandomSequenceContainer Name="RDM_NPC_Hurt_Dry" ID="{4463DC42-803E-4382-A31F-DD2DD8F1A9F7}" ShortID="991763901">
+								<RandomSequenceContainer Name="SQ_NPC_Cat_Hurt" ID="{429DE117-5F10-4154-8FE4-CE383BACAB60}" ShortID="913901150">
 									<PropertyList>
-										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -922,7 +1596,10 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="SFX_NPC_Hurt_Dry_01" ID="{074C2DA3-F1D3-4A38-A29A-225BB3A86EEC}" ShortID="482637969">
+										<RandomSequenceContainer Name="RDM_NPC_Cat_Hurt" ID="{79B16450-7C5E-48CB-9ED8-7E2562D18C23}" ShortID="754575710">
+											<PropertyList>
+												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
@@ -932,168 +1609,320 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{197C3EE5-D5A5-4BE1-B306-C60BCCA17786}">
+												<Sound Name="SFX_NPC_Cat_Hurt" ID="{E07D2747-F8A9-4127-B584-69ED17C9D642}" ShortID="276670485">
 													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimEnd" Type="Real64" Value="0.733651040289502"/>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>180</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+														<Property Name="Soundly:FileID" Type="string" Value="SND11307"/>
+														<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1710682805HZexYzgrBBe3UZISkIW&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND11307/sfy_ypApSNyzerEYMDdLdKRfQEMQdSEWVj"/>
+														<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+														<Property Name="Soundly:HandleStopTime" Type="string" Value="24.5153125"/>
+														<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+														<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+														<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+														<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+														<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+														<Property Name="Soundly:RenderedFilePath" Type="string" Value="C:\Users\is44c\Soundly Audio\Animals, Cat Domestic, Meow, Sad 02 SND11307.wav"/>
+														<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="48000"/>
+														<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.4215277777777778"/>
+														<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.4236111111111111"/>
 													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>SFX_NPC_Hurt_Dry_01to08.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="455530426"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{197C3EE5-D5A5-4BE1-B306-C60BCCA17786}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="SFX_NPC_Hurt_Dry_02" ID="{F3ACC2A5-1C15-43E7-BECE-0EF927000809}" ShortID="995114935">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{33238862-A7FD-47D9-8BFA-A9409D3B25DA}">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Animals, Cat Domestic, Meow, Sad 02 SND11307" ID="{9717FF2E-5FA6-4080-8E92-1F14F993F9C3}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.772182488215918"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND11307"/>
+																<Property Name="TrimBegin" Type="Real64" Value="10.7434720654614"/>
+																<Property Name="TrimEnd" Type="Real64" Value="11.5156545536773"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Soundly Audio\Animals, Cat Domestic, Meow, Sad 02 SND11307.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="696844737"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Animals, Cat Domestic, Meow, Sad 02 SND11307" ID="{9717FF2E-5FA6-4080-8E92-1F14F993F9C3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_NPC_Cat_Hurt_01" ID="{B2508F79-0946-4D3C-B62E-84FC33FAB7FE}" ShortID="861302276">
 													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.919098282573859"/>
-														<Property Name="TrimEnd" Type="Real64" Value="1.66804678740837"/>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>230</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+														<Property Name="Soundly:FileID" Type="string" Value="SND11307"/>
+														<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1710682805HZexYzgrBBe3UZISkIW&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND11307/sfy_ypApSNyzerEYMDdLdKRfQEMQdSEWVj"/>
+														<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+														<Property Name="Soundly:HandleStopTime" Type="string" Value="24.5153125"/>
+														<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+														<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+														<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+														<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+														<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+														<Property Name="Soundly:RenderedFilePath" Type="string" Value="C:\Users\is44c\Soundly Audio\Animals, Cat Domestic, Meow, Sad 02 SND11307.wav"/>
+														<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="48000"/>
+														<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.4215277777777778"/>
+														<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.4236111111111111"/>
 													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>SFX_NPC_Hurt_Dry_01to08.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="895969117"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{33238862-A7FD-47D9-8BFA-A9409D3B25DA}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="SFX_NPC_Hurt_Dry_03" ID="{53B47229-BFB5-4CF9-A420-F9761B29C105}" ShortID="546183722">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{211BF673-CA22-451D-B7F7-8B007E517035}">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Animals, Cat Domestic, Meow, Sad 02 SND11307" ID="{E4CA121F-AEE5-4258-B632-47EF35C6BB96}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.772182488215918"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND11307"/>
+																<Property Name="TrimBegin" Type="Real64" Value="12.3292039609048"/>
+																<Property Name="TrimEnd" Type="Real64" Value="13.2388794376295"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Soundly Audio\Animals, Cat Domestic, Meow, Sad 02 SND11307.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="393056"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Animals, Cat Domestic, Meow, Sad 02 SND11307" ID="{E4CA121F-AEE5-4258-B632-47EF35C6BB96}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_NPC_Cat_Hurt_02" ID="{767DD33F-A0D2-4CE0-804B-734271CE2CEC}" ShortID="235075281">
 													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="1.78003066664138"/>
-														<Property Name="TrimEnd" Type="Real64" Value="2.25903593140636"/>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>250</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+														<Property Name="Soundly:FileID" Type="string" Value="SND11307"/>
+														<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1710682805HZexYzgrBBe3UZISkIW&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND11307/sfy_ypApSNyzerEYMDdLdKRfQEMQdSEWVj"/>
+														<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+														<Property Name="Soundly:HandleStopTime" Type="string" Value="24.5153125"/>
+														<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+														<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+														<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+														<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+														<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+														<Property Name="Soundly:RenderedFilePath" Type="string" Value="C:\Users\is44c\Soundly Audio\Animals, Cat Domestic, Meow, Sad 02 SND11307.wav"/>
+														<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="48000"/>
+														<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.4215277777777778"/>
+														<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.4236111111111111"/>
 													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>SFX_NPC_Hurt_Dry_01to08.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="169770706"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{211BF673-CA22-451D-B7F7-8B007E517035}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="SFX_NPC_Hurt_Dry_04" ID="{45819610-0FCB-4B3C-8885-CFE4E9F21BC1}" ShortID="696057594">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{3D05BA63-8C73-4065-AC69-42C3DC0A73F5}">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Animals, Cat Domestic, Meow, Sad 02 SND11307" ID="{027B3585-157C-4F08-979F-AB82E6C16B5E}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.772182488215918"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND11307"/>
+																<Property Name="TrimBegin" Type="Real64" Value="17.4988786127616"/>
+																<Property Name="TrimEnd" Type="Real64" Value="18.5711224747648"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Soundly Audio\Animals, Cat Domestic, Meow, Sad 02 SND11307.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="517794078"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Animals, Cat Domestic, Meow, Sad 02 SND11307" ID="{027B3585-157C-4F08-979F-AB82E6C16B5E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_NPC_Cat_Hurt_03" ID="{B828B838-8D79-47B3-A4CB-FCFADE5B0B37}" ShortID="202826595">
 													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="2.64979365286126"/>
-														<Property Name="TrimEnd" Type="Real64" Value="3.30156517353659"/>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>270</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+														<Property Name="Soundly:FileID" Type="string" Value="SND11307"/>
+														<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1710682805HZexYzgrBBe3UZISkIW&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND11307/sfy_ypApSNyzerEYMDdLdKRfQEMQdSEWVj"/>
+														<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+														<Property Name="Soundly:HandleStopTime" Type="string" Value="24.5153125"/>
+														<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+														<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+														<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+														<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+														<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+														<Property Name="Soundly:RenderedFilePath" Type="string" Value="C:\Users\is44c\Soundly Audio\Animals, Cat Domestic, Meow, Sad 02 SND11307.wav"/>
+														<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="48000"/>
+														<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.4215277777777778"/>
+														<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.4236111111111111"/>
 													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>SFX_NPC_Hurt_Dry_01to08.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="13485794"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{3D05BA63-8C73-4065-AC69-42C3DC0A73F5}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="SFX_NPC_Hurt_Dry_05" ID="{CA3F82B8-DB96-4D76-B93D-880D5CFD2237}" ShortID="869049224">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{1B23C06A-9006-46D2-B151-E2FF0465FD0D}">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Animals, Cat Domestic, Meow, Sad 02 SND11307" ID="{5D6F7666-06AB-4008-8165-394C5401AB78}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.772182488215918"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND11307"/>
+																<Property Name="TrimBegin" Type="Real64" Value="6.07177077306584"/>
+																<Property Name="TrimEnd" Type="Real64" Value="7.08509660179843"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Soundly Audio\Animals, Cat Domestic, Meow, Sad 02 SND11307.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="372188060"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Animals, Cat Domestic, Meow, Sad 02 SND11307" ID="{5D6F7666-06AB-4008-8165-394C5401AB78}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_NPC_Cat_Hurt_04" ID="{A069BBDA-9503-4B27-8D47-BF2091A4BCB1}" ShortID="1061201743">
 													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="3.45917570971449"/>
-														<Property Name="TrimEnd" Type="Real64" Value="4.01487465499412"/>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>270</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+														<Property Name="Soundly:FileID" Type="string" Value="SND11307"/>
+														<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1710682805HZexYzgrBBe3UZISkIW&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND11307/sfy_ypApSNyzerEYMDdLdKRfQEMQdSEWVj"/>
+														<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+														<Property Name="Soundly:HandleStopTime" Type="string" Value="24.5153125"/>
+														<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+														<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+														<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+														<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+														<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+														<Property Name="Soundly:RenderedFilePath" Type="string" Value="C:\Users\is44c\Soundly Audio\Animals, Cat Domestic, Meow, Sad 02 SND11307.wav"/>
+														<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="48000"/>
+														<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.4215277777777778"/>
+														<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.4236111111111111"/>
 													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>SFX_NPC_Hurt_Dry_01to08.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="501436184"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{1B23C06A-9006-46D2-B151-E2FF0465FD0D}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="SFX_NPC_Hurt_Dry_06" ID="{752C5EAA-6BB7-4FFF-B9DB-B5AFFC942106}" ShortID="788806335">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{A3A4C65A-19CC-45A2-AD31-2AC8BB6EA068}">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Animals, Cat Domestic, Meow, Sad 02 SND11307" ID="{0E42A784-9083-478C-A9D9-68FF6144735C}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0424555406339557"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.772182488215918"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND11307"/>
+																<Property Name="TrimBegin" Type="Real64" Value="2.81368285169319"/>
+																<Property Name="TrimEnd" Type="Real64" Value="3.68396831466714"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Soundly Audio\Animals, Cat Domestic, Meow, Sad 02 SND11307.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="150419510"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Animals, Cat Domestic, Meow, Sad 02 SND11307" ID="{0E42A784-9083-478C-A9D9-68FF6144735C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_NPC_Cat_Hurt_05" ID="{28DE6406-6FAF-4BFA-A6FE-2DE92C65C5EA}" ShortID="836292567">
 													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="4.28993830343788"/>
-														<Property Name="TrimEnd" Type="Real64" Value="4.60419657264476"/>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>270</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+														<Property Name="Soundly:FileID" Type="string" Value="SND11307"/>
+														<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1710682805HZexYzgrBBe3UZISkIW&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND11307/sfy_ypApSNyzerEYMDdLdKRfQEMQdSEWVj"/>
+														<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+														<Property Name="Soundly:HandleStopTime" Type="string" Value="24.5153125"/>
+														<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+														<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+														<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+														<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+														<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+														<Property Name="Soundly:RenderedFilePath" Type="string" Value="C:\Users\is44c\Soundly Audio\Animals, Cat Domestic, Meow, Sad 02 SND11307.wav"/>
+														<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="48000"/>
+														<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.4215277777777778"/>
+														<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.4236111111111111"/>
 													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>SFX_NPC_Hurt_Dry_01to08.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="432179721"/>
-													</MediaIDList>
-												</AudioFileSource>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Animals, Cat Domestic, Meow, Sad 02 SND11307" ID="{98CCF1F6-8CF0-4DDB-919D-8FF84C2544A6}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0424555406339557"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.71068863614979"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND11307"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.71068863614979"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Soundly Audio\Animals, Cat Domestic, Meow, Sad 02 SND11307.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="799973143"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Animals, Cat Domestic, Meow, Sad 02 SND11307" ID="{98CCF1F6-8CF0-4DDB-919D-8FF84C2544A6}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_NPC_Hurt_Dry_01to08" ID="{A3A4C65A-19CC-45A2-AD31-2AC8BB6EA068}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
+										</RandomSequenceContainer>
 									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="RDM_NPC_Cat_Hurt" ID="{79B16450-7C5E-48CB-9ED8-7E2562D18C23}" WorkUnitID="{DA2CEEB3-E224-412F-AE49-231F385863BC}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 								</RandomSequenceContainer>
 							</ChildrenList>
-							<ObjectLists>
-								<ObjectList Name="Playlist">
-									<Reference>
-										<ObjectRef Name="RDM_NPC_Hurt_Dry" ID="{4463DC42-803E-4382-A31F-DD2DD8F1A9F7}" WorkUnitID="{DA2CEEB3-E224-412F-AE49-231F385863BC}"/>
-									</Reference>
-								</ObjectList>
-							</ObjectLists>
-						</RandomSequenceContainer>
+						</ActorMixer>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>

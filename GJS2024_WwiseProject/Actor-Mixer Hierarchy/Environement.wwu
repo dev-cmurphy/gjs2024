@@ -16,6 +16,45 @@
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<BlendContainer Name="Blend_Environement" ID="{2C4C9B22-3ED4-4D59-869E-918018E68E86}" ShortID="569442766">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Ambience, Forest, Day, Wind In Trees, Insects, Baltic 01 SND41356" ID="{06EB045F-592B-4ABC-9456-88648DD77525}" ShortID="415746822">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A70339AF-E930-4A76-9627-C9BE37706205}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8DB4C49-6F21-44BB-9195-4A5E68077257}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambience, Forest, Day, Wind In Trees, Insects, Baltic 01 SND41356" ID="{BBB82AB6-6024-495D-B6FA-975F2C17295B}">
+											<Language>SFX</Language>
+											<AudioFile>Ambience, Forest, Day, Wind In Trees, Insects, Baltic 01 SND41356.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="968063299"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambience, Forest, Day, Wind In Trees, Insects, Baltic 01 SND41356" ID="{BBB82AB6-6024-495D-B6FA-975F2C17295B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<BlendTrackList>
+								<BlendTrack Name="Ambience_Forest_Day" ID="{AE1B7D9E-37B3-4F6E-B16C-EF7CB19F9A52}" ShortID="110955945"/>
+							</BlendTrackList>
+						</BlendContainer>
+					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>

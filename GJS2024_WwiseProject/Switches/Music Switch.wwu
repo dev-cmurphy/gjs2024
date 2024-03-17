@@ -12,6 +12,16 @@
 						<Switch Name="lvl5" ID="{90A64AB7-4112-4F5C-9D8E-BDC4EE70F760}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Music_Switch_Fights" ID="{F6F33701-D666-4C20-BC29-C2FFC4CD177D}">
+					<ChildrenList>
+						<Switch Name="Fight1" ID="{FA236D76-D1D8-4119-B6CB-A8A555AEC2FB}"/>
+						<Switch Name="Fight2" ID="{25D8D004-6135-420B-9A88-57FA994C564E}"/>
+						<Switch Name="Fight3" ID="{AE19E62C-7991-43A3-A274-5D9A80815280}"/>
+						<Switch Name="IntroMusic" ID="{08BA130F-A370-4AA2-B5AD-36CE86B1BB3F}"/>
+						<Switch Name="End1" ID="{0604D1C8-7568-48A9-BF5A-98F6D3F5BAD9}"/>
+						<Switch Name="End23" ID="{E9CB09DD-9852-4C69-A18D-052D04A91F75}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

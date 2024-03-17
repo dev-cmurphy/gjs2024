@@ -9,9 +9,11 @@
 						<ObjectRef Name="Play_Music" ID="{72D1101A-0A5B-428D-8EE3-22FF9C0E2A71}" WorkUnitID="{BE3B8A77-C15D-4E4D-B09B-1688F1C40650}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Player_Footsteps_Walk" ID="{F86B36CB-1F7C-42CF-B252-19E6289CB629}" WorkUnitID="{90193F73-76D2-4234-8628-F83C132E1C98}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Player_Jump" ID="{548C2F19-5B74-439F-8C7E-C93BB28338B9}" WorkUnitID="{90193F73-76D2-4234-8628-F83C132E1C98}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_NPC_Hurt" ID="{6DB905DB-D107-499F-9950-29419D1E7B60}" WorkUnitID="{F8E5FF5D-3256-4EDF-8100-EFA8A6426D41}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Cat_Hurt" ID="{85AD006E-0C33-4755-8153-86CD0FE6421C}" WorkUnitID="{F8E5FF5D-3256-4EDF-8100-EFA8A6426D41}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Rabbit_Hurt" ID="{6DB905DB-D107-499F-9950-29419D1E7B60}" WorkUnitID="{F8E5FF5D-3256-4EDF-8100-EFA8A6426D41}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_SW_Music" ID="{5C47AD8C-09A3-4A2C-8762-031545B3B0DC}" WorkUnitID="{BE3B8A77-C15D-4E4D-B09B-1688F1C40650}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Player_Footsteps_Walk" ID="{2FC2EEE8-D820-4C54-98C1-E610611A4EFE}" WorkUnitID="{90193F73-76D2-4234-8628-F83C132E1C98}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Bird_Hurt" ID="{B555551A-D251-4CED-90F9-74F4A8A93FB6}" WorkUnitID="{F8E5FF5D-3256-4EDF-8100-EFA8A6426D41}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Gun_Shot" ID="{A76ABBE1-422A-4FDE-8A2E-09A903403269}" WorkUnitID="{808A93E9-0331-48EA-97E3-2C4836F5B149}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

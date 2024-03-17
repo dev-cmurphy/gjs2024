@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F49E2927-571D-40E4-A01C-DA18CD3A029A}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="Soundly" ID="{F49E2927-571D-40E4-A01C-DA18CD3A029A}" PersistMode="Standalone"/>
+	</AudioObjects>
+</WwiseDocument>

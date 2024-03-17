@@ -7,19 +7,69 @@
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
-				<Event Name="Play_NPC_Hurt" ID="{6DB905DB-D107-499F-9950-29419D1E7B60}">
+				<Event Name="Play_Rabbit_Hurt" ID="{6DB905DB-D107-499F-9950-29419D1E7B60}">
 					<ChildrenList>
 						<Action Name="" ID="{09A6EAE1-0062-4A3C-9612-0F16AB76993F}" ShortID="591500623">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SQ_NPC_Hurt_Dry" ID="{46DCED5C-55BC-485B-9742-FF7D987A3912}" WorkUnitID="{DA2CEEB3-E224-412F-AE49-231F385863BC}"/>
+									<ObjectRef Name="SQ_Rabbit_Hurt_Dry" ID="{46DCED5C-55BC-485B-9742-FF7D987A3912}" WorkUnitID="{DA2CEEB3-E224-412F-AE49-231F385863BC}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{5B87DB19-3315-40FA-881B-087CA767EAEF}" ShortID="906566369">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SQ_NPC_Hurt_Wet" ID="{B4E8E246-986C-4E1F-A9D5-E336B1A5FE24}" WorkUnitID="{DA2CEEB3-E224-412F-AE49-231F385863BC}"/>
+									<ObjectRef Name="SQ_Rabbit_Hurt_Wet" ID="{B4E8E246-986C-4E1F-A9D5-E336B1A5FE24}" WorkUnitID="{DA2CEEB3-E224-412F-AE49-231F385863BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Cat_Hurt" ID="{85AD006E-0C33-4755-8153-86CD0FE6421C}">
+					<ChildrenList>
+						<Action Name="" ID="{035785E5-2221-49FB-9E10-5B2690FA5B3A}" ShortID="148024483">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SQ_NPC_Cat_Hurt" ID="{429DE117-5F10-4154-8FE4-CE383BACAB60}" WorkUnitID="{DA2CEEB3-E224-412F-AE49-231F385863BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D17A2396-C32A-4B22-97E4-B3D7D7063A0D}" ShortID="535809434">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SQ_Rabbit_Hurt_Dry" ID="{46DCED5C-55BC-485B-9742-FF7D987A3912}" WorkUnitID="{DA2CEEB3-E224-412F-AE49-231F385863BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5EB8D382-18A5-41FD-B409-826EAC3367B9}" ShortID="1071792116">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SQ_Rabbit_Hurt_Wet" ID="{B4E8E246-986C-4E1F-A9D5-E336B1A5FE24}" WorkUnitID="{DA2CEEB3-E224-412F-AE49-231F385863BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Bird_Hurt" ID="{B555551A-D251-4CED-90F9-74F4A8A93FB6}">
+					<ChildrenList>
+						<Action Name="" ID="{8FA86D22-FC63-4564-AE8A-F217B1D4F0C2}" ShortID="827113103">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SQ_NPC_Bird_Hurt" ID="{EC270308-34D7-4411-ACDB-8B6539D214E5}" WorkUnitID="{DA2CEEB3-E224-412F-AE49-231F385863BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{52514627-2B14-49E3-B906-58B44DCA2AB1}" ShortID="964973608">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SQ_Rabbit_Hurt_Dry" ID="{46DCED5C-55BC-485B-9742-FF7D987A3912}" WorkUnitID="{DA2CEEB3-E224-412F-AE49-231F385863BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3AAB66E1-7141-4BD5-9DCA-1AB9B5817C8C}" ShortID="848961565">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SQ_Rabbit_Hurt_Wet" ID="{B4E8E246-986C-4E1F-A9D5-E336B1A5FE24}" WorkUnitID="{DA2CEEB3-E224-412F-AE49-231F385863BC}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

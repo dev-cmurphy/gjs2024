@@ -30,15 +30,16 @@
 							<Position X="1" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_NPC_Hurt" ID="{6DB905DB-D107-499F-9950-29419D1E7B60}" WorkUnitID="{F8E5FF5D-3256-4EDF-8100-EFA8A6426D41}"/>
+							<ObjectRef Name="Play_Rabbit_Hurt" ID="{6DB905DB-D107-499F-9950-29419D1E7B60}" WorkUnitID="{F8E5FF5D-3256-4EDF-8100-EFA8A6426D41}"/>
 							<Position X="2" Y="0"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="lvl5" ID="{90A64AB7-4112-4F5C-9D8E-BDC4EE70F760}"/>
-						<CurrentSwitchRef Name="Grass" ID="{28943A4D-623A-4D42-AF41-8EF18D7203D5}"/>
+						<CurrentSwitchRef Name="Lvl1" ID="{8FD9439B-E914-4CBC-A314-E6CE84A033B1}"/>
+						<CurrentSwitchRef Name="Dirt" ID="{468C341F-EC51-4325-9C63-5082D42E54E6}"/>
+						<CurrentSwitchRef Name="End1" ID="{0604D1C8-7568-48A9-BF5A-98F6D3F5BAD9}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
