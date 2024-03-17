@@ -22,6 +22,12 @@
 						<Switch Name="End23" ID="{E9CB09DD-9852-4C69-A18D-052D04A91F75}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="SW_Music_lvltoFinal" ID="{97312A2C-D5DB-4F16-BF3F-AE945B50C15B}">
+					<ChildrenList>
+						<Switch Name="Lvl" ID="{F6745B12-3F77-4D8B-9A21-8648FA3AF7AE}"/>
+						<Switch Name="Finale" ID="{21667573-E335-4974-8C86-37695AEC1184}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

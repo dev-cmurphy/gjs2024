@@ -14,10 +14,6 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_Music" ID="{72D1101A-0A5B-428D-8EE3-22FF9C0E2A71}" WorkUnitID="{BE3B8A77-C15D-4E4D-B09B-1688F1C40650}"/>
-							<Position X="0" Y="2"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="Play_Gun_Shot" ID="{A76ABBE1-422A-4FDE-8A2E-09A903403269}" WorkUnitID="{808A93E9-0331-48EA-97E3-2C4836F5B149}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -33,13 +29,22 @@
 							<ObjectRef Name="Play_Rabbit_Hurt" ID="{6DB905DB-D107-499F-9950-29419D1E7B60}" WorkUnitID="{F8E5FF5D-3256-4EDF-8100-EFA8A6426D41}"/>
 							<Position X="2" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Play_All_Music" ID="{BADD00C3-7970-4424-9E2B-06139955D2CE}" WorkUnitID="{BE3B8A77-C15D-4E4D-B09B-1688F1C40650}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_All_Music" ID="{4D29CCF2-7280-43B9-AB99-13A0848515C9}" WorkUnitID="{BE3B8A77-C15D-4E4D-B09B-1688F1C40650}"/>
+							<Position X="3" Y="1"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Lvl1" ID="{8FD9439B-E914-4CBC-A314-E6CE84A033B1}"/>
+						<CurrentSwitchRef Name="Lvl2" ID="{E0139CC6-9DE9-4CAE-A439-7E9D3D0B45B9}"/>
 						<CurrentSwitchRef Name="Dirt" ID="{468C341F-EC51-4325-9C63-5082D42E54E6}"/>
 						<CurrentSwitchRef Name="End1" ID="{0604D1C8-7568-48A9-BF5A-98F6D3F5BAD9}"/>
+						<CurrentSwitchRef Name="Lvl" ID="{F6745B12-3F77-4D8B-9A21-8648FA3AF7AE}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

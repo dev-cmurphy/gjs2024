@@ -1642,11 +1642,11 @@
 													<ChildrenList>
 														<AudioFileSource Name="Animals, Cat Domestic, Meow, Sad 02 SND11307" ID="{9717FF2E-5FA6-4080-8E92-1F14F993F9C3}">
 															<PropertyList>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.772182488215918"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.478426020350994"/>
 																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 																<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND11307"/>
 																<Property Name="TrimBegin" Type="Real64" Value="10.7434720654614"/>
-																<Property Name="TrimEnd" Type="Real64" Value="11.5156545536773"/>
+																<Property Name="TrimEnd" Type="Real64" Value="11.9162315553113"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Soundly Audio\Animals, Cat Domestic, Meow, Sad 02 SND11307.wav</AudioFile>
