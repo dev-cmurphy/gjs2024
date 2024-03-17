@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8456688771813909293}
   m_Layer: 0
-  m_Name: Boss
+  m_Name: BackgroundBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

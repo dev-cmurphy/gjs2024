@@ -200,7 +200,7 @@ namespace kc.runtime
                         if (enemy)
                         {
                             // damage enemy
-                            enemy.loseHealth(_stompDamage);
+                            enemy.loseHealth(_stompDamage, true);
                             ResetVerticalVelocity();
                             _rigidbody.AddForce(new Vector2(0f, _jumpForce), ForceMode2D.Impulse);
                         }

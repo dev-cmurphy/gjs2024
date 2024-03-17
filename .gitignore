@@ -78,3 +78,5 @@ Assets/StreamingAssets/Audio/GeneratedSoundBanks/
 *.lnk
 
 Assets/WwiseSettings.xml
+
+Assets/WwiseSettings.xml.meta
