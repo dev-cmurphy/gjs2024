@@ -4897,7 +4897,7 @@
 																									</Point>
 																									<Point>
 																										<XPos>24.7272916666667</XPos>
-																										<YPos>-0</YPos>
+																										<YPos>0</YPos>
 																										<Flags>37</Flags>
 																									</Point>
 																								</PointList>
@@ -5012,7 +5012,7 @@
 						<ObjectList Name="Entries">
 							<Reference>
 								<Local>
-									<MultiSwitchEntry Name="" ID="{0868B4CF-CC73-431E-B10F-8ACF1333C026}">
+									<MultiSwitchEntry Name="" ID="{8DB4C895-808E-432F-8387-3C45EF08F4D4}">
 										<ReferenceList>
 											<Reference Name="AudioNode">
 												<ObjectRef Name="Lvl1" ID="{C0944063-CA5D-4955-A05B-C3580DFCE2F3}" WorkUnitID="{771E73EF-2B14-40A1-805E-71343BBAA320}"/>
@@ -5030,7 +5030,7 @@
 							</Reference>
 							<Reference>
 								<Local>
-									<MultiSwitchEntry Name="" ID="{D82FE12D-BB65-4FD8-A771-56F4594AB7EB}">
+									<MultiSwitchEntry Name="" ID="{276D98FF-67BA-44B4-BFE1-3CD000909D08}">
 										<ReferenceList>
 											<Reference Name="AudioNode">
 												<ObjectRef Name="Lvl2" ID="{93AE38AD-1510-462C-9F5B-8C78407C675A}" WorkUnitID="{771E73EF-2B14-40A1-805E-71343BBAA320}"/>
@@ -5048,7 +5048,7 @@
 							</Reference>
 							<Reference>
 								<Local>
-									<MultiSwitchEntry Name="" ID="{5666D22B-CF60-48A8-9B70-538318FA3E21}">
+									<MultiSwitchEntry Name="" ID="{7BA9DB9C-7803-4F9B-B073-F7C184401F8B}">
 										<ReferenceList>
 											<Reference Name="AudioNode">
 												<ObjectRef Name="Lvl3" ID="{8B1235D5-16A7-4569-A6A8-0A7823FCF3A0}" WorkUnitID="{771E73EF-2B14-40A1-805E-71343BBAA320}"/>

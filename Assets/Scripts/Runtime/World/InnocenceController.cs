@@ -11,10 +11,17 @@ namespace kc.runtime
     {
         private static InnocenceController _instance;
 
+        [SerializeField]
         private int _guilt;
 
         [SerializeField]
         private int _guiltPerKill;
+
+        [SerializeField]
+        private List<AkSwitch> _switches;
+
+        [SerializeField]
+        private GameObject _soundObject;
 
         private void Awake()
         {
@@ -34,6 +41,22 @@ namespace kc.runtime
         public static int GetGuilt()
         {
             return _instance._guilt;
+        }
+
+        private void Update()
+        {
+            for (int i = 0; i < _switches.Count; i++)
+            {
+                if (!_switches[i].gameObject.activeSelf)
+                {
+                    if (_guilt / 5 >= i)
+                    {
+                        _switches[i].gameObject.SetActive(true);
+                        _switches[i].data.SetValue(_soundObject);
+                        Debug.Log($"Setting {i}");
+                    }
+                }
+            }
         }
     }
 }
