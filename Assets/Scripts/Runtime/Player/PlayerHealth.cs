@@ -25,8 +25,7 @@ namespace kc.runtime
         [SerializeField]
         private UnityEvent<float> _onDamage;
 
-        [SerializeField]
-        private UnityEvent _onDeath;
+        public UnityEvent OnDeath = new UnityEvent();
 
         private void Awake()
         {
@@ -95,6 +94,12 @@ namespace kc.runtime
 
             _currentHealth -= dmg;
             _onDamage.Invoke(_currentHealth);
+
+            if (_currentHealth <= 0)
+            {
+                this.enabled = false;
+                OnDeath.Invoke();
+            }
         }
     }
 }
