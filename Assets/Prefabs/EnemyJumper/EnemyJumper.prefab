@@ -184,7 +184,7 @@ MonoBehaviour:
   _deathSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 6d039acf567a50a4b8084cf6403c3c1b, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 1b935ea1a450d9342b49e129b38d6b6c, type: 2}
   _maxHealth: 5
 --- !u!95 &266239660576616881
 Animator:

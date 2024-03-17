@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1353b7d96ad2924ca0f0babc05269f00
     GuidInternal: 
-    m_lastTime: -8584909685493652295
+    m_lastTime: -8584909133692196630
     List:
     - name: Soundbanks
       guid: 73506eeeee3534449b079a2027ccdf61
@@ -154,11 +154,11 @@ MonoBehaviour:
     ParentPath: Events\NPC
     guid: 5dffe5f85632df4e8100efa8a6426d41
     GuidInternal: 
-    m_lastTime: -8584909917053236351
+    m_lastTime: -8584909133723747026
     List:
-    - name: Play_NPC_Hurt
-      guid: db05b96d07d19f49995029419d1e7b60
-      id: 2887477077
+    - name: Play_Bird_Hurt
+      guid: 1a5555b551d2ed4c90f974f4a8a93fb6
+      id: 1463828797
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -166,10 +166,44 @@ MonoBehaviour:
       - ElementName: NPC
         ObjectType: 12
         guid: 5dffe5f85632df4e8100efa8a6426d41
-      - ElementName: Play_NPC_Hurt
+      - ElementName: Play_Bird_Hurt
+        ObjectType: 3
+        guid: 1a5555b551d2ed4c90f974f4a8a93fb6
+      Path: Events\NPC\Play_Bird_Hurt
+      maxAttenuation: 0
+      maxDuration: 1.5382533
+      minDuration: 0.5127372
+    - name: Play_Cat_Hurt
+      guid: 6e00ad85330c5547815386cd0fe6421c
+      id: 2612945666
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: NPC
+        ObjectType: 12
+        guid: 5dffe5f85632df4e8100efa8a6426d41
+      - ElementName: Play_Cat_Hurt
+        ObjectType: 3
+        guid: 6e00ad85330c5547815386cd0fe6421c
+      Path: Events\NPC\Play_Cat_Hurt
+      maxAttenuation: 0
+      maxDuration: 0.92806625
+      minDuration: 0.6080617
+    - name: Play_Rabbit_Hurt
+      guid: db05b96d07d19f49995029419d1e7b60
+      id: 451259346
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: NPC
+        ObjectType: 12
+        guid: 5dffe5f85632df4e8100efa8a6426d41
+      - ElementName: Play_Rabbit_Hurt
         ObjectType: 3
         guid: db05b96d07d19f49995029419d1e7b60
-      Path: Events\NPC\Play_NPC_Hurt
+      Path: Events\NPC\Play_Rabbit_Hurt
       maxAttenuation: 0
       maxDuration: 0.7682292
       minDuration: 0.43197918
@@ -337,8 +371,122 @@ MonoBehaviour:
     ParentPath: Switches\Music Switch
     guid: cf3fe86af4c1f943957572f620042d3e
     GuidInternal: 
-    m_lastTime: -8584909836201573643
+    m_lastTime: -8584909133692046637
     List:
+    - name: Music_Switch_Fights
+      guid: 0137f3f666d6204cbc29c2ffc4cd177d
+      id: 3111285781
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music Switch
+        ObjectType: 12
+        guid: cf3fe86af4c1f943957572f620042d3e
+      - ElementName: Music_Switch_Fights
+        ObjectType: 11
+        guid: 0137f3f666d6204cbc29c2ffc4cd177d
+      Path: Switches\Music Switch\Music_Switch_Fights
+      values:
+      - name: End1
+        guid: c8d104066875a948bf5a98f6d3f5bad9
+        id: 4167245629
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music Switch
+          ObjectType: 12
+          guid: cf3fe86af4c1f943957572f620042d3e
+        - ElementName: Music_Switch_Fights
+          ObjectType: 11
+          guid: 0137f3f666d6204cbc29c2ffc4cd177d
+        - ElementName: End1
+          ObjectType: 10
+          guid: c8d104066875a948bf5a98f6d3f5bad9
+      - name: End23
+        guid: dd09cbe95298694ca18d052d04a91f75
+        id: 1107963561
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music Switch
+          ObjectType: 12
+          guid: cf3fe86af4c1f943957572f620042d3e
+        - ElementName: Music_Switch_Fights
+          ObjectType: 11
+          guid: 0137f3f666d6204cbc29c2ffc4cd177d
+        - ElementName: End23
+          ObjectType: 10
+          guid: dd09cbe95298694ca18d052d04a91f75
+      - name: Fight1
+        guid: 766d23fad8d11941b6cba8a555aec2fb
+        id: 2704056014
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music Switch
+          ObjectType: 12
+          guid: cf3fe86af4c1f943957572f620042d3e
+        - ElementName: Music_Switch_Fights
+          ObjectType: 11
+          guid: 0137f3f666d6204cbc29c2ffc4cd177d
+        - ElementName: Fight1
+          ObjectType: 10
+          guid: 766d23fad8d11941b6cba8a555aec2fb
+      - name: Fight2
+        guid: 04d0d82535610b429a8857fa994c564e
+        id: 2704056013
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music Switch
+          ObjectType: 12
+          guid: cf3fe86af4c1f943957572f620042d3e
+        - ElementName: Music_Switch_Fights
+          ObjectType: 11
+          guid: 0137f3f666d6204cbc29c2ffc4cd177d
+        - ElementName: Fight2
+          ObjectType: 10
+          guid: 04d0d82535610b429a8857fa994c564e
+      - name: Fight3
+        guid: 2ce619ae9179a343a2745d9a80815280
+        id: 2704056012
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music Switch
+          ObjectType: 12
+          guid: cf3fe86af4c1f943957572f620042d3e
+        - ElementName: Music_Switch_Fights
+          ObjectType: 11
+          guid: 0137f3f666d6204cbc29c2ffc4cd177d
+        - ElementName: Fight3
+          ObjectType: 10
+          guid: 2ce619ae9179a343a2745d9a80815280
+      - name: IntroMusic
+        guid: 0f13ba0870a3a24ab5ad36ce86b1bb3f
+        id: 2539580210
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music Switch
+          ObjectType: 12
+          guid: cf3fe86af4c1f943957572f620042d3e
+        - ElementName: Music_Switch_Fights
+          ObjectType: 11
+          guid: 0137f3f666d6204cbc29c2ffc4cd177d
+        - ElementName: IntroMusic
+          ObjectType: 10
+          guid: 0f13ba0870a3a24ab5ad36ce86b1bb3f
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: Music_Switch_Lvl
       guid: df9be5640f507543b5f42a011965cb37
       id: 469175266
@@ -530,7 +678,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584910785614843132
     List: []
-  ExpandedFileSystemItemIds: 02000000
+  ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1

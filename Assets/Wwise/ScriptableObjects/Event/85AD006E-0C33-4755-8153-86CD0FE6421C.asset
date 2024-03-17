@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c261535d2870734391424279dd1312d, type: 3}
-  m_Name: 6DB905DB-D107-499F-9950-29419D1E7B60
+  m_Name: 85AD006E-0C33-4755-8153-86CD0FE6421C
   m_EditorClassIdentifier: 
-  objectName: Play_Rabbit_Hurt
-  id: 451259346
-  guid: 6DB905DB-D107-499F-9950-29419D1E7B60
+  objectName: Play_Cat_Hurt
+  id: 2612945666
+  guid: 85AD006E-0C33-4755-8153-86CD0FE6421C
