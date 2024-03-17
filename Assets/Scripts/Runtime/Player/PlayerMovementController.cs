@@ -193,6 +193,10 @@ namespace kc.runtime
                     }
                 }
             }
+            else if (collision.collider.CompareTag("Checkpoint"))
+            {
+                //collision.collider.transform.position;
+            }
         }
 
         private void OnCollisionExit2D(Collision2D collision)
