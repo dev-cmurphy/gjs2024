@@ -81,6 +81,7 @@ GameObject:
   - component: {fileID: 7761906923622561372}
   - component: {fileID: 5947948921058892860}
   - component: {fileID: 266239660576616881}
+  - component: {fileID: 2441327989382403889}
   m_Layer: 0
   m_Name: EnemyJumper
   m_TagString: Enemy
@@ -103,7 +104,7 @@ Transform:
   - {fileID: 6297434689573996525}
   - {fileID: 8457873249995904797}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1681191959435434011
 Rigidbody2D:
@@ -144,7 +145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 741658f78fd876a43b0d2c8c4f3e3967, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 0}
   _acceleration: 3
   _jumpForce: 6
   _speed: 3
@@ -201,6 +201,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2441327989382403889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7638481130319980992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f609f8bd5ffc9444da33b073edda260c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 1
 --- !u!1 &9122336051696578156
 GameObject:
   m_ObjectHideFlags: 0
