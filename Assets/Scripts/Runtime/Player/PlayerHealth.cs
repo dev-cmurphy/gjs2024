@@ -87,7 +87,7 @@ namespace kc.runtime
                 Color c = _playerSprite.color;
 
                 c.a = (_invincibilityTimer % 0.2f) / 0.2f;
-
+                
                 _invincibilityTimer += Time.deltaTime;
                 if (_invincibilityTimer > _invincibleTime)
                 {

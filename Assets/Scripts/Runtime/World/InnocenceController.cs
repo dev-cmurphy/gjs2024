@@ -48,7 +48,7 @@ namespace kc.runtime
             {
                 if (!_switches[i].gameObject.activeSelf)
                 {
-                    if (_guilt / 13 >= i)
+                    if (_guilt / 25 >= i)
                     {
                         _switches[i].gameObject.SetActive(true);
                         _switches[i].data.SetValue(_soundObject);

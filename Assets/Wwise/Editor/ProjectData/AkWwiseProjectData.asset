@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1353b7d96ad2924ca0f0babc05269f00
     GuidInternal: 
-    m_lastTime: -8584909121007963115
+    m_lastTime: -8584909093418329309
     List:
     - name: Soundbanks
       guid: 73506eeeee3534449b079a2027ccdf61
@@ -107,7 +107,7 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: 778a3bbe5dc14d4eb09b1688f1c40650
     GuidInternal: 
-    m_lastTime: -8584909121042435577
+    m_lastTime: -8584909093418699038
     List:
     - name: Play_All_Music
       guid: c300ddba707924449e2b06139955d2ce
@@ -126,6 +126,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Stingers
+      guid: 1ebe2e1d72d4db41b5032ca3229ff455
+      id: 3564543639
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: 778a3bbe5dc14d4eb09b1688f1c40650
+      - ElementName: Play_Stingers
+        ObjectType: 3
+        guid: 1ebe2e1d72d4db41b5032ca3229ff455
+      Path: Events\Music\Play_Stingers
+      maxAttenuation: 0
+      maxDuration: 7.27275
+      minDuration: 7.27275
     - name: Stop_All_Music
       guid: f2cc294d8072b943ab9913a0848515c9
       id: 2595883869
@@ -154,7 +171,7 @@ MonoBehaviour:
     ParentPath: Events\NPC
     guid: 5dffe5f85632df4e8100efa8a6426d41
     GuidInternal: 
-    m_lastTime: -8584909121042425571
+    m_lastTime: -8584909116118939570
     List:
     - name: Play_Bird_Hurt
       guid: 1a5555b551d2ed4c90f974f4a8a93fb6
@@ -371,7 +388,7 @@ MonoBehaviour:
     ParentPath: Switches\Music Switch
     guid: cf3fe86af4c1f943957572f620042d3e
     GuidInternal: 
-    m_lastTime: -8584909121007953116
+    m_lastTime: -8584909116087951670
     List:
     - name: Music_Switch_Fights
       guid: 0137f3f666d6204cbc29c2ffc4cd177d
@@ -728,9 +745,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584910785614843132
     List: []
-  ExpandedFileSystemItemIds: 
+  ExpandedFileSystemItemIds: 0200000004000000080000000c0000000e0000001200000014000000150000002200000025000000
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 

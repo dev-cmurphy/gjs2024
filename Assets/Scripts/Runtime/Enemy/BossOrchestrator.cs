@@ -1,15 +1,22 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace kc.runtime.Assets.Scripts.Runtime.Enemy
 {
     public class BossOrchestrator : MonoBehaviour
     {
         [SerializeField]
+        private AK.Wwise.Switch _switchFinal, _switchIntro, _switchFight1, _switchFight2, _switchFight3, _switchEnd1, _switchEnd23;
+
+        [SerializeField]
         private GameObject _door;
 
         [SerializeField]
         private GameObject _boss;
+
+        [SerializeField]
+        private GameObject _soundObject;
 
         [SerializeField]
         private SpriteRenderer _bossSprite;
@@ -31,6 +38,18 @@ namespace kc.runtime.Assets.Scripts.Runtime.Enemy
 
         [SerializeField]
         private int _timeEnd;
+
+        [SerializeField]
+        private GameObject _enemyFlyer, _enemyJumper;
+
+        [SerializeField]
+        private Transform _spawner;
+
+        [SerializeField]
+        private GameObject _guiltEndGameObject;
+
+        [SerializeField]
+        private GameObject _innoEndGameObject;
 
         private float _timer;
         private float _jumperTimer;
@@ -76,10 +95,21 @@ namespace kc.runtime.Assets.Scripts.Runtime.Enemy
             StartCoroutine(BossCoroutine());
         }
 
+        private void SpawnEnemies(Vector2 pos, int count, GameObject prefab)
+        {
+            for (int i  = 0; i < count; i++)
+            {
+                GameObject inst = Instantiate(prefab);
+                inst.transform.position = pos + (Random.insideUnitCircle * 3) ;
+            }
+        }
+
         private IEnumerator BossCoroutine()
         {
             // Close door
             _door.SetActive(true);
+            _switchFinal.SetValue(_soundObject);
+            _switchIntro.SetValue(_soundObject);
 
             // Set Camera
             yield return new WaitForSeconds(1f);
@@ -89,13 +119,19 @@ namespace kc.runtime.Assets.Scripts.Runtime.Enemy
             {
                 // Change music
 
+                _switchFight1.SetValue(_soundObject);
+
                 // Boss appears
                 _bossSprite.sprite = _spriteOursGentil;
                 _boss.SetActive(true);
 
+                yield return new WaitForSeconds(4f);
                 // Spawn confettis
+                _innoEndGameObject.SetActive(true);
 
                 yield return new WaitForSeconds(10f);
+
+                _switchEnd1.SetValue(_soundObject);
             }
             // Guilty run
             else
@@ -105,10 +141,12 @@ namespace kc.runtime.Assets.Scripts.Runtime.Enemy
                 // Boss appears
                 if (InnocenceController.GetGuilt() > 100)
                 {
+                    _switchFight3.SetValue(_soundObject);
                     _bossSprite.sprite = _spriteOursFache;
                 }
                 else
                 {
+                    _switchFight2.SetValue(_soundObject);
                     _bossSprite.sprite = _spriteOursMedium;
                 }
                 _boss.SetActive(true);
@@ -125,6 +163,7 @@ namespace kc.runtime.Assets.Scripts.Runtime.Enemy
                     {
                         // Spawn some jumpers
 
+                        SpawnEnemies(_spawner.position, 10, _enemyJumper);
                         _jumperTimer = 0;
                     }
 
@@ -132,10 +171,21 @@ namespace kc.runtime.Assets.Scripts.Runtime.Enemy
                     {
                         // Spawn some flyers
 
+                        SpawnEnemies(_spawner.position, 10, _enemyFlyer);
                         _flyerTimer = 0;
                     }
                 }
-            }            
+
+                // win
+
+                _switchEnd23.SetValue(_soundObject);
+                _guiltEndGameObject.SetActive(true);
+
+            }
+
+
+            yield return new WaitForSeconds(8);
+            SceneManager.LoadScene("End");
         }
 
         private void TryShoot()

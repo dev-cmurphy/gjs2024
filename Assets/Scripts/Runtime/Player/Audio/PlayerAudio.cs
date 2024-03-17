@@ -9,6 +9,12 @@ namespace kc.runtime
         private AK.Wwise.Event _startWalkEvent, _stopWalkEvent, _jumpEvent, _touchGroundEvent, _shootEvent;
 
         [SerializeField]
+        private GameObject _ambient;
+
+        [SerializeField]
+        private AK.Wwise.Event _death;
+
+        [SerializeField]
         private Rigidbody2D _body;
 
         [SerializeField]
@@ -48,6 +54,12 @@ namespace kc.runtime
         private void OnDestroy()
         {
             _stopWalkEvent.Post(gameObject);
+        }
+
+        public void Die()
+        {
+            _death.Post(gameObject);
+            _death.Post(_ambient);
         }
 
         public void Jump()

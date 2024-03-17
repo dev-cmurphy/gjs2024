@@ -90,8 +90,8 @@ namespace kc.runtime
 
         private void OnEnable()
         {
-            _jumpAction.started += _ => StartJump();
-            _jumpAction.canceled += _ => EndJump();
+            _jumpAction.started += StartJump;
+            _jumpAction.canceled += EndJump;
         }
 
         private void OnDisable()
@@ -99,18 +99,13 @@ namespace kc.runtime
             RemoveCallbacks();
         }
 
-        private void OnDestroy()
-        {
-            RemoveCallbacks();
-        }
-
         private void RemoveCallbacks()
         {
-            _jumpAction.started -= _ => StartJump();
-            _jumpAction.canceled -= _ => EndJump();
+            _jumpAction.started -= StartJump;
+            _jumpAction.canceled -= EndJump;
         }
 
-        private void StartJump()
+        private void StartJump(InputAction.CallbackContext obj)
         {
             if (CanJump())
             {
@@ -123,7 +118,7 @@ namespace kc.runtime
             }
         }
 
-        private void EndJump()
+        private void EndJump(InputAction.CallbackContext obj)
         {
             _isJumping = false;
         }
