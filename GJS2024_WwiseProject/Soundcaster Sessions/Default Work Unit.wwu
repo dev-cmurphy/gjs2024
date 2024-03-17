@@ -30,6 +30,10 @@
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Play_Stingers" ID="{1D2EBE1E-D472-41DB-B503-2CA3229FF455}" WorkUnitID="{BE3B8A77-C15D-4E4D-B09B-1688F1C40650}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Play_All_Music" ID="{BADD00C3-7970-4424-9E2B-06139955D2CE}" WorkUnitID="{BE3B8A77-C15D-4E4D-B09B-1688F1C40650}"/>
 							<Position X="3" Y="0"/>
 						</Module>

@@ -32,6 +32,34 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Stingers" ID="{1D2EBE1E-D472-41DB-B503-2CA3229FF455}">
+					<ChildrenList>
+						<Action Name="" ID="{76A02CCF-76FE-4F5D-B639-CEA1F6B5987F}" ShortID="992793501">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Stingers" ID="{20BFD9CB-418D-4279-A1E3-94127A6CFCBE}" WorkUnitID="{419E520B-F7E7-450C-B169-F9843264A7A0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1A3DB53F-BA52-40D0-8D2C-464B006F8DDD}" ShortID="975007295">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Delay" Type="Real64" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+							<ChildrenList>
+								<EventActionException Name="" ID="{39EB2EBF-1AEA-4EFA-99BD-0510CDAA8B2B}">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Stingers" ID="{20BFD9CB-418D-4279-A1E3-94127A6CFCBE}" WorkUnitID="{419E520B-F7E7-450C-B169-F9843264A7A0}"/>
+										</Reference>
+									</ReferenceList>
+								</EventActionException>
+							</ChildrenList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
